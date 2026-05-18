@@ -1,227 +1,77 @@
-# 🍔 L’Etoile Ballainvilliers — Premium Fast-Food Website
+# L'Etoile Clermont — Site vitrine premium
 
-A modern premium fast-food restaurant website inspired by luxury food delivery experiences and cinematic restaurant branding.
+Site vitrine premium pour **L'Etoile Clermont — Ballainvilliers**, restaurant fast-food / street food situé à Clermont-Ferrand.
 
-This project recreates and modernizes the experience of a traditional fast-food restaurant website with a high-end UI/UX approach.
+## Objectif
 
----
+Créer une expérience web moderne, premium et pratique pour présenter :
 
-# ✨ Overview
+- l'identité L'Etoile Clermont ;
+- les catégories de la carte ;
+- les best-sellers ;
+- les informations de contact réelles ;
+- une page menu complète et facile à naviguer.
 
-L’Etoile Ballainvilliers is a modern restaurant website designed for:
+## Informations restaurant utilisées
 
-* French tacos
-* Burgers
-* Bowls
-* Fries & barquettes
-* Desserts
-* Drinks
+- **Adresse :** 29 Rue Ballainvilliers, 63000 Clermont-Ferrand
+- **Téléphone :** 04 73 90 57 38
+- **Horaires :** ouvert 7j/7 de 10h00 à 01h00
+- **Commande en ligne :** Uber Eats + commande par téléphone
 
-The goal of the project is to combine:
+## Structure
 
-* premium branding
-* cinematic food presentation
-* smooth user experience
-* responsive design
-* modern landing page aesthetics
-* practical restaurant menu navigation
+```txt
+index.html              # Page d'accueil premium
+menu.html               # Menu complet dédié
+mentions-legales.html   # Mentions légales
+confidentialite.html    # Politique de confidentialité
+cgv.html                # Conditions générales de vente
+cookies.html            # Cookies
+robots.txt              # SEO robots
+sitemap.xml             # Sitemap
+css/style.css           # Styles custom
+js/main.js              # Interactions globales
+js/menu.js              # Données et recherche du menu
+```
 
----
+## Fonctionnalités
 
-# 🎨 Design Direction
+- Hero section premium rouge/noir
+- Menu complet sur page séparée `/menu.html`
+- Recherche instantanée dans le menu
+- Navigation sticky par catégories
+- Cards produits uniformisées
+- CTA téléphone et Uber Eats
+- Visuel officiel L'Etoile Clermont intégré
+- Footer avec informations réelles
+- Pages légales simples
+- Données structurées Restaurant Schema
+- Responsive mobile
 
-The website uses a strong visual identity based on:
+## Lancer localement
 
-* Deep black backgrounds
-* Red premium accents
-* White typography
-* Cinematic lighting
-* Glassmorphism effects
-* Smooth gradients
-* Modern shadows and glow effects
+Ouvrir directement `index.html` dans un navigateur, ou lancer un petit serveur local :
 
-Inspired by:
+```bash
+python -m http.server 8080
+```
 
-* Burger King premium campaigns
-* Five Guys branding
-* Uber Eats UI
-* Deliveroo experiences
-* Modern SaaS landing pages
+Puis ouvrir :
 
----
+```txt
+http://localhost:8080
+```
 
-# 🖥️ Features
+## Déploiement
 
-## 🔥 Hero Section
+Le site est statique et peut être déployé sur :
 
-* Cinematic food composition
-* Premium burger visuals
-* French tacos showcase
-* CTA buttons
-* Dynamic gradients
-* Modern typography
+- Vercel
+- Netlify
+- GitHub Pages
+- tout hébergement statique
 
-## 🍽️ Menu Categories
+## Notes
 
-* Tacos Signatures
-* Tacos à Composer
-* Burgers
-* Bowls
-* Frites & Barquettes
-* Desserts
-* Boissons
-
-## ⭐ Product Cards
-
-Each product card includes:
-
-* Premium food image
-* Product title
-* Price
-* Description
-* Hover effects
-* Smooth transitions
-
-## 📱 Responsive Design
-
-* Mobile-first experience
-* Tablet optimization
-* Desktop premium layout
-* Responsive cards and typography
-
-## 🎥 Animations
-
-* Hover interactions
-* Smooth transitions
-* Reveal effects
-* Floating visual elements
-* Modern UI micro-interactions
-
----
-
-# 🍔 Example Menu Items
-
-## 🌮 Tacos Signatures
-
-* O’Merveille — 10€
-* O’Thentik — 12€
-* O’Chevre Miel — 10€
-* O’Spicy — 12€
-* O’Riginal — 12€
-* Doritos — 12€
-
-## 🍔 Burgers
-
-* Cheese Burger — 7.90€
-* Double Cheese — 8.90€
-* Triple Cheese — 9.90€
-* Royal Bacon — 9.90€
-* Mac Burger — 9.90€
-
-## 🍟 Fries & Barquettes
-
-* Moyenne Frites — 3.90€
-* Grande Frites — 4.90€
-* Frites Cheddar Bacon — 5.90€
-* Barquette Kebab — 12€
-
-## 🍰 Desserts
-
-* Cheesecake Cookies — 4.50€
-* Tiramisu Caramel Spéculos — 4.50€
-* Panini Nutella — 5.90€
-
-## 🥤 Drinks
-
-* Coca-Cola
-* Fanta
-* Sprite
-* Oasis
-* Monster
-
----
-
-# ⚙️ Tech Stack
-
-## Frontend
-
-* Next.js
-* React
-* Tailwind CSS
-* Framer Motion
-
-## UI/UX
-
-* Responsive Design
-* Glassmorphism
-* Modern Animations
-* Premium Food Photography
-
-## Deployment
-
-* Vercel
-
----
-
-# 📸 Assets & Resources
-
-Food images and inspirations sourced from:
-
-* Freepik
-* Unsplash
-* Pexels
-* Shutterstock
-* Adobe Stock
-* Envato Elements
-
----
-
-# 🚀 Performance Goals
-
-* Fast loading
-* Optimized images
-* Smooth scrolling
-* Responsive experience
-* Mobile optimization
-* SEO-friendly structure
-
----
-
-# 🎯 Project Goals
-
-The objective of this project is to create:
-
-* a realistic restaurant website
-* a premium digital brand
-* a visually immersive experience
-* a conversion-focused landing page
-* a modern fast-food online presence
-
----
-
-# 📱 Future Improvements
-
-Planned enhancements:
-
-* Online ordering system
-* Shopping cart
-* Payment integration
-* Delivery tracking
-* Customer authentication
-* Admin dashboard
-* CMS integration
-* Reviews system
-* Loyalty program
-* Dark/light mode
-
----
-
-# 👨‍💻 Author
-
-Created as a modern premium restaurant web experience project.
-
----
-
-# 📄 License
-
-This project is for educational and portfolio purposes.
+Les photos food premium restent principalement des visuels libres/stock. Un visuel officiel du site L'Etoile Clermont est intégré via son URL officielle pour renforcer la fidélité à la marque réelle.

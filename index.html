@@ -49,6 +49,26 @@
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "L'Etoile Clermont - Ballainvilliers",
+    "servesCuisine": ["Tacos", "Burgers", "Bowls", "Fast food"],
+    "telephone": "+33473905738",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "29 Rue Ballainvilliers",
+      "postalCode": "63000",
+      "addressLocality": "Clermont-Ferrand",
+      "addressCountry": "FR"
+    },
+    "openingHours": "Mo-Su 10:00-01:00",
+    "url": "https://www.letoile-clermont.com/"
+  }
+  </script>
+
   <!-- Custom -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -64,8 +84,8 @@
   <div class="topbar relative z-40 border-b border-brand-red/20 bg-black/70 backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[12px] text-brand-gray">
       <div class="flex items-center gap-5">
-        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 de 11h00 à 02h00</span>
-        <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-red"></i> 63 Avenue de la République, Clermont-Ferrand</span>
+        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 de 10h00 à 01h00</span>
+        <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-red"></i> 29 Rue Ballainvilliers, Clermont-Ferrand</span>
       </div>
       <div class="flex items-center gap-4">
         <a href="#" aria-label="Instagram" class="hover:text-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
@@ -91,17 +111,17 @@
       <!-- Center menu -->
       <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/80">
         <a href="#home"      class="nav-link">Accueil</a>
-        <a href="#tacos"     class="nav-link">Tacos</a>
-        <a href="#burgers"   class="nav-link">Burgers</a>
-        <a href="#bowls"     class="nav-link">Bowls</a>
-        <a href="#frites"    class="nav-link">Frites & Barquettes</a>
-        <a href="#desserts"  class="nav-link">Desserts</a>
-        <a href="#boissons"  class="nav-link">Boissons</a>
+        <a href="menu.html#tacos-signatures"     class="nav-link">Tacos</a>
+        <a href="menu.html#burgers"   class="nav-link">Burgers</a>
+        <a href="menu.html#bowls"     class="nav-link">Bowls</a>
+        <a href="menu.html#frites"    class="nav-link">Frites & Barquettes</a>
+        <a href="menu.html#desserts"  class="nav-link">Desserts</a>
+        <a href="menu.html#boissons"  class="nav-link">Boissons</a>
         <a href="#contact"   class="nav-link">Contact</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#commander" class="btn-red hidden sm:inline-flex">
+        <a href="menu.html" class="btn-red hidden sm:inline-flex">
           <i class="fa-solid fa-bag-shopping"></i> COMMANDER
         </a>
         <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5">
@@ -121,20 +141,20 @@
       </div>
       <nav class="flex flex-col gap-1 text-lg">
         <a href="#home"     class="m-link" data-close>Accueil</a>
-        <a href="#tacos"    class="m-link" data-close>Tacos</a>
-        <a href="#burgers"  class="m-link" data-close>Burgers</a>
-        <a href="#bowls"    class="m-link" data-close>Bowls</a>
-        <a href="#frites"   class="m-link" data-close>Frites & Barquettes</a>
-        <a href="#desserts" class="m-link" data-close>Desserts</a>
-        <a href="#boissons" class="m-link" data-close>Boissons</a>
+        <a href="menu.html#tacos-signatures"    class="m-link" data-close>Tacos</a>
+        <a href="menu.html#burgers"  class="m-link" data-close>Burgers</a>
+        <a href="menu.html#bowls"    class="m-link" data-close>Bowls</a>
+        <a href="menu.html#frites"   class="m-link" data-close>Frites & Barquettes</a>
+        <a href="menu.html#desserts" class="m-link" data-close>Desserts</a>
+        <a href="menu.html#boissons" class="m-link" data-close>Boissons</a>
         <a href="#contact"  class="m-link" data-close>Contact</a>
       </nav>
-      <a href="#commander" class="btn-red mt-8 w-full justify-center" data-close>
+      <a href="menu.html" class="btn-red mt-8 w-full justify-center" data-close>
         <i class="fa-solid fa-bag-shopping"></i> COMMANDER
       </a>
       <div class="mt-8 border-t border-white/10 pt-6 text-sm text-brand-gray">
-        <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 — 11h00 à 02h00</p>
-        <p class="mt-2 flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-red mt-1"></i> 63 Avenue de la République,<br/>Clermont-Ferrand</p>
+        <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 — 10h00 à 01h00</p>
+        <p class="mt-2 flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-red mt-1"></i> 29 Rue Ballainvilliers,<br/>Clermont-Ferrand</p>
         <div class="mt-5 flex gap-4 text-lg">
           <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-facebook-f"></i></a>
@@ -167,8 +187,8 @@
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4 reveal">
-          <a href="#commander" class="btn-red btn-lg"><i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE</a>
-          <a href="#menu" class="btn-ghost btn-lg"><i class="fa-solid fa-utensils"></i> VOIR LE MENU</a>
+          <a href="menu.html" class="btn-red btn-lg"><i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE</a>
+          <a href="menu.html" class="btn-ghost btn-lg"><i class="fa-solid fa-utensils"></i> VOIR LE MENU</a>
         </div>
 
         <!-- Social proof -->
@@ -178,21 +198,21 @@
             <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=32" alt="" />
             <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=47" alt="" />
             <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=58" alt="" />
-            <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-xs font-bold ring-2 ring-brand-dark">+1k</span>
+            <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-xs font-bold ring-2 ring-brand-dark">★</span>
           </div>
           <div class="text-sm">
             <div class="text-brand-red text-base">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
-            <p class="text-brand-gray">4,8/5 sur plus de 1200 avis</p>
+            <p class="text-brand-gray">Avis clients sur Google & plateformes de livraison</p>
           </div>
         </div>
 
         <!-- Mini stats -->
         <div class="mt-10 grid grid-cols-3 gap-4 max-w-md reveal">
-          <div><div class="font-display text-3xl text-brand-red">15+</div><div class="text-xs text-brand-gray uppercase tracking-widest">Recettes signature</div></div>
-          <div><div class="font-display text-3xl text-brand-red">25min</div><div class="text-xs text-brand-gray uppercase tracking-widest">Livraison moyenne</div></div>
-          <div><div class="font-display text-3xl text-brand-red">100%</div><div class="text-xs text-brand-gray uppercase tracking-widest">Frais & maison</div></div>
+          <div><div class="font-display text-3xl text-brand-red">2010</div><div class="text-xs text-brand-gray uppercase tracking-widest">Créateur de tacos</div></div>
+          <div><div class="font-display text-3xl text-brand-red">2</div><div class="text-xs text-brand-gray uppercase tracking-widest">Adresses à Clermont</div></div>
+          <div><div class="font-display text-3xl text-brand-red">7j/7</div><div class="text-xs text-brand-gray uppercase tracking-widest">Ouvert tous les jours</div></div>
         </div>
       </div>
 
@@ -234,7 +254,7 @@
             <div class="grid h-9 w-9 place-items-center rounded-full bg-white/10"><i class="fa-solid fa-bolt text-brand-red"></i></div>
             <div>
               <p class="text-xs uppercase tracking-widest text-brand-gray">Livraison</p>
-              <p class="text-sm font-semibold">~ 25 min à Clermont</p>
+              <p class="text-sm font-semibold">Commande au 04 73 90 57 38</p>
             </div>
           </div>
         </div>
@@ -273,53 +293,68 @@
     <div class="mx-auto max-w-7xl px-4">
       <div class="mb-14 text-center reveal">
         <p class="font-script text-brand-red text-2xl">Notre carte</p>
-        <h2 class="section-title">Découvrez nos catégories</h2>
+        <h2 class="section-title">Nos catégories phares</h2>
         <div class="title-underline"></div>
       </div>
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Tacos -->
-        <a href="#tacos" id="tacos" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80')">
+        <a href="menu.html#tacos-signatures" id="tacos" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80')">
           <div class="cat-icon"><i class="fa-solid fa-pepper-hot"></i></div>
           <h3 class="cat-title">Tacos</h3>
           <p class="cat-desc">Le french tacos signature, fondant et généreux. 1, 2 ou 3 viandes.</p>
           <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <!-- Burgers -->
-        <a href="#burgers" id="burgers" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80')">
+        <a href="menu.html#burgers" id="burgers" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80')">
           <div class="cat-icon"><i class="fa-solid fa-burger"></i></div>
           <h3 class="cat-title">Burgers</h3>
           <p class="cat-desc">Pains briochés, viande hachée du jour, fromages affinés.</p>
           <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <!-- Bowls -->
-        <a href="#bowls" id="bowls" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80')">
+        <a href="menu.html#bowls" id="bowls" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80')">
           <div class="cat-icon"><i class="fa-solid fa-bowl-food"></i></div>
           <h3 class="cat-title">Bowls</h3>
           <p class="cat-desc">Frais, équilibrés, gourmands. Poulet crispy, saumon, veggie.</p>
           <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <!-- Frites -->
-        <a href="#frites" id="frites" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=80')">
+        <a href="menu.html#frites" id="frites" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=80')">
           <div class="cat-icon"><i class="fa-solid fa-utensils"></i></div>
           <h3 class="cat-title">Frites & Barquettes</h3>
           <p class="cat-desc">Cheddar bacon, sauce maison, poulet crispy, nuggets premium.</p>
           <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <!-- Desserts -->
-        <a href="#desserts" id="desserts" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80')">
+        <a href="menu.html#desserts" id="desserts" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80')">
           <div class="cat-icon"><i class="fa-solid fa-ice-cream"></i></div>
           <h3 class="cat-title">Desserts</h3>
           <p class="cat-desc">Cookies coulants, brownies, gaufres, fondants chocolat.</p>
           <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
         </a>
         <!-- Boissons -->
-        <a href="#boissons" id="boissons" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=80')">
+        <a href="menu.html#boissons" id="boissons" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=80')">
           <div class="cat-icon"><i class="fa-solid fa-mug-hot"></i></div>
           <h3 class="cat-title">Boissons</h3>
           <p class="cat-desc">Sodas frais, milkshakes onctueux, eaux et jus pressés.</p>
           <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
         </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============== PHOTO OFFICIELLE ============== -->
+  <section class="relative z-10 py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="official-card reveal">
+        <div>
+          <p class="font-script text-brand-red text-2xl">Photo officielle</p>
+          <h2 class="section-title">L’Etoile en vrai</h2>
+          <p class="text-brand-gray mt-3 max-w-2xl">Visuel issu du site officiel L’Etoile Clermont, intégré pour garder une identité fidèle au snack réel tout en conservant le design premium.</p>
+        </div>
+        <img src="https://www.letoile-clermont.com/wp-content/uploads/2026/01/Letoile-Tacos-Campagne-Produit-01-Goodsite-Banniere-scaled.jpg" alt="Photo officielle L’Etoile Clermont - produits Croustiz" loading="lazy"/>
       </div>
     </div>
   </section>
@@ -337,11 +372,10 @@
       <div class="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-4 reveal">
         <div>
           <p class="font-script text-brand-red text-2xl">Les incontournables</p>
-          <h2 class="section-title">Produits signature</h2>
+          <h2 class="section-title">Best-sellers</h2>
         </div>
         <p class="text-brand-gray max-w-md">
-          La sélection des recettes les plus commandées par nos clients.
-          Reconnaissables, généreuses et signées L'Etoile.
+          Un aperçu des incontournables. Le menu complet est disponible sur une page dédiée pour une navigation plus simple.
         </p>
       </div>
 
@@ -354,8 +388,8 @@
             <h3 class="font-display text-2xl tracking-wider">O'Merveille Taco</h3>
             <p class="text-sm text-brand-gray mt-1">Poulet, cheddar, sauce signature, oignons crispy</p>
             <div class="mt-5 flex items-center justify-between">
-              <span class="font-display text-2xl text-brand-red">9,90 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <span class="font-display text-2xl text-brand-red">10 €</span>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-arrow-right"></i> MENU</a>
             </div>
           </div>
         </article>
@@ -367,8 +401,8 @@
             <h3 class="font-display text-2xl tracking-wider">O'Spicy Taco</h3>
             <p class="text-sm text-brand-gray mt-1">Boeuf haché, jalapeños, cheddar fondu, sauce piquante</p>
             <div class="mt-5 flex items-center justify-between">
-              <span class="font-display text-2xl text-brand-red">10,50 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <span class="font-display text-2xl text-brand-red">12 €</span>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-arrow-right"></i> MENU</a>
             </div>
           </div>
         </article>
@@ -380,8 +414,8 @@
             <h3 class="font-display text-2xl tracking-wider">Double Cheese</h3>
             <p class="text-sm text-brand-gray mt-1">Double steak, double cheddar, oignons confits, bun brioché</p>
             <div class="mt-5 flex items-center justify-between">
-              <span class="font-display text-2xl text-brand-red">11,90 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <span class="font-display text-2xl text-brand-red">8,90 €</span>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-arrow-right"></i> MENU</a>
             </div>
           </div>
         </article>
@@ -393,8 +427,8 @@
             <h3 class="font-display text-2xl tracking-wider">Frites Cheddar Bacon</h3>
             <p class="text-sm text-brand-gray mt-1">Frites maison, cheddar coulant, éclats de bacon</p>
             <div class="mt-5 flex items-center justify-between">
-              <span class="font-display text-2xl text-brand-red">7,50 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <span class="font-display text-2xl text-brand-red">5,90 €</span>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-arrow-right"></i> MENU</a>
             </div>
           </div>
         </article>
@@ -552,25 +586,24 @@
             <p class="font-script text-brand-red text-2xl">Livraison</p>
             <h2 class="section-title">Commandez où vous voulez</h2>
             <p class="text-brand-gray mt-4 max-w-md">
-              Disponible sur Uber Eats, Deliveroo et en commande à emporter sur place.
-              Livraison rapide à Clermont-Ferrand et alentours.
+              Disponible en commande par téléphone, sur Uber Eats et en click & collect. Livraison rapide à Clermont-Ferrand et alentours.
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#" class="brand-pill"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
-              <a href="#" class="brand-pill"><i class="fa-solid fa-bicycle"></i> Deliveroo</a>
-              <a href="#" class="brand-pill"><i class="fa-solid fa-bag-shopping"></i> Click & Collect</a>
+              <a href="https://www.ubereats.com/fr-en/store/letoile-ballainvilliers-clermont/W7dR6fEYQMW9Rufibn16AA" target="_blank" rel="noopener" class="brand-pill"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
+              
+              <a href="tel:0473905738" class="brand-pill"><i class="fa-solid fa-phone"></i> Commander par téléphone</a>
             </div>
 
             <div class="mt-10 grid grid-cols-3 gap-3 max-w-md">
-              <div class="delivery-stat"><i class="fa-solid fa-stopwatch text-brand-red"></i><div><div class="font-display text-xl">25 min</div><div class="text-xs text-brand-gray">Livraison</div></div></div>
-              <div class="delivery-stat"><i class="fa-solid fa-route text-brand-red"></i><div><div class="font-display text-xl">5 km</div><div class="text-xs text-brand-gray">Rayon</div></div></div>
-              <div class="delivery-stat"><i class="fa-solid fa-shield-halved text-brand-red"></i><div><div class="font-display text-xl">100%</div><div class="text-xs text-brand-gray">Garantie</div></div></div>
+              <div class="delivery-stat"><i class="fa-solid fa-phone text-brand-red"></i><div><div class="font-display text-xl">Appel</div><div class="text-xs text-brand-gray">04 73 90 57 38</div></div></div>
+              <div class="delivery-stat"><i class="fa-solid fa-location-dot text-brand-red"></i><div><div class="font-display text-xl">Centre</div><div class="text-xs text-brand-gray">Ballainvilliers</div></div></div>
+              <div class="delivery-stat"><i class="fa-solid fa-clock text-brand-red"></i><div><div class="font-display text-xl">7j/7</div><div class="text-xs text-brand-gray">10h à 1h</div></div></div>
             </div>
 
             <div class="mt-10 flex flex-wrap gap-4">
-              <a href="#" class="btn-red btn-lg"><i class="fa-solid fa-bolt"></i> COMMANDER MAINTENANT</a>
-              <a href="#" class="btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> 04 73 00 00 00</a>
+              <a href="menu.html" class="btn-red btn-lg"><i class="fa-solid fa-bolt"></i> VOIR LE MENU</a>
+              <a href="tel:0473905738" class="btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> 04 73 90 57 38</a>
             </div>
           </div>
 
@@ -590,7 +623,7 @@
                 </div>
                 <div class="px-5">
                   <p class="font-script text-brand-red text-lg">Bonsoir 👋</p>
-                  <h3 class="font-display text-2xl leading-tight">Que vous fait <br/> envie ce soir ?</h3>
+                  <h3 class="font-display text-2xl leading-tight">Qu’est-ce qui vous fait <br/> envie ce soir ?</h3>
                   <div class="mt-4 grid grid-cols-3 gap-2 text-[10px] uppercase tracking-widest">
                     <span class="chip active">Tacos</span>
                     <span class="chip">Burgers</span>
@@ -602,7 +635,7 @@
                     <div class="p-3">
                       <div class="flex items-center justify-between">
                         <p class="text-sm font-semibold">O'Merveille Taco</p>
-                        <span class="text-brand-red font-display">9,90€</span>
+                        <span class="text-brand-red font-display">10€</span>
                       </div>
                       <p class="text-[11px] text-brand-gray mt-0.5">Sauce signature, cheddar, poulet crispy</p>
                       <button class="phone-cta mt-3"><i class="fa-solid fa-plus"></i> Ajouter au panier</button>
@@ -670,23 +703,23 @@
       <div>
         <p class="footer-title">Menu</p>
         <ul class="footer-list">
-          <li><a href="#tacos">Tacos</a></li>
-          <li><a href="#burgers">Burgers</a></li>
-          <li><a href="#bowls">Bowls</a></li>
-          <li><a href="#frites">Frites & Barquettes</a></li>
-          <li><a href="#desserts">Desserts</a></li>
-          <li><a href="#boissons">Boissons</a></li>
+          <li><a href="menu.html#tacos-signatures">Tacos</a></li>
+          <li><a href="menu.html#burgers">Burgers</a></li>
+          <li><a href="menu.html#bowls">Bowls</a></li>
+          <li><a href="menu.html#frites">Frites & Barquettes</a></li>
+          <li><a href="menu.html#desserts">Desserts</a></li>
+          <li><a href="menu.html#boissons">Boissons</a></li>
         </ul>
       </div>
 
       <div>
         <p class="footer-title">Contact</p>
         <ul class="footer-list">
-          <li><i class="fa-solid fa-location-dot text-brand-red mr-2"></i> 63 Avenue de la République, Clermont-Ferrand</li>
-          <li><i class="fa-solid fa-phone text-brand-red mr-2"></i> 04 73 00 00 00</li>
-          <li><i class="fa-regular fa-clock text-brand-red mr-2"></i> 7j/7 — 11h00 à 02h00</li>
-          <li><i class="fa-regular fa-envelope text-brand-red mr-2"></i> contact@letoile-clermont.fr</li>
+          <li><i class="fa-solid fa-location-dot text-brand-red mr-2"></i> 29 Rue Ballainvilliers, Clermont-Ferrand</li>
+          <li><i class="fa-solid fa-phone text-brand-red mr-2"></i> 04 73 90 57 38</li>
+          <li><i class="fa-regular fa-clock text-brand-red mr-2"></i> 7j/7 — 10h00 à 01h00</li>
         </ul>
+        <a class="mt-4 inline-flex text-sm text-brand-red hover:text-white" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=29+Rue+Ballainvilliers+63000+Clermont-Ferrand">Voir sur Google Maps</a>
       </div>
 
       <div>
@@ -707,16 +740,16 @@
       <div class="mx-auto max-w-7xl px-4 py-5 flex flex-col md:flex-row items-center justify-between text-xs text-brand-gray gap-3">
         <p>© <span id="year"></span> L'Etoile Clermont — Tous droits réservés.</p>
         <div class="flex gap-5">
-          <a href="#" class="hover:text-white">Mentions légales</a>
-          <a href="#" class="hover:text-white">Confidentialité</a>
-          <a href="#" class="hover:text-white">CGV</a>
+          <a href="mentions-legales.html" class="hover:text-white">Mentions légales</a>
+          <a href="confidentialite.html" class="hover:text-white">Confidentialité</a>
+          <a href="cgv.html" class="hover:text-white">CGV</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Floating CTA (mobile) -->
-  <a href="#commander" class="floating-cta">
+  <a href="menu.html" class="floating-cta">
     <i class="fa-solid fa-bag-shopping"></i> Commander
   </a>
 
