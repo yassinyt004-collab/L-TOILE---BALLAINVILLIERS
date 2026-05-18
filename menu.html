@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050505" />
+  <title>Menu — L'Etoile Clermont · Tacos, Burgers, Bowls, Frites, Desserts</title>
+  <meta name="description" content="Découvrez le menu complet de L'Etoile Clermont : tacos signatures, burgers, bowls, frites, desserts et boissons. Commandez en ligne." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red:  '#ff1e1e', red2: '#ff3a3a', redD: '#a30000',
+              dark: '#0a0a0a', ink:  '#050505',
+              char: '#141414', line: '#1f1f1f', gray: '#a8a8a8',
+            }
+          },
+          fontFamily: {
+            display: ['"Anton"', 'Impact', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            script:  ['"Caveat"', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+</head>
+
+<body class="bg-brand-ink text-white font-sans antialiased selection:bg-brand-red selection:text-white">
+
+  <!-- Ambient layers -->
+  <div class="bg-grain pointer-events-none fixed inset-0 z-0"></div>
+  <div class="bg-vignette pointer-events-none fixed inset-0 z-0"></div>
+  <div class="bg-glow-1 pointer-events-none fixed -top-40 -left-40 h-[700px] w-[700px] rounded-full blur-[160px] z-0"></div>
+  <div class="bg-glow-2 pointer-events-none fixed top-1/3 -right-40 h-[600px] w-[600px] rounded-full blur-[180px] z-0"></div>
+  <div class="bg-scanlines pointer-events-none fixed inset-0 z-0"></div>
+
+  <!-- ============== TOP BAR ============== -->
+  <div class="topbar relative z-40 border-b border-brand-red/20 bg-black/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[12px] text-brand-gray">
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 de 11h00 à 02h00</span>
+        <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-red"></i> 63 Avenue de la République, Clermont-Ferrand</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" aria-label="Instagram" class="hover:text-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"  class="hover:text-brand-red transition"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Snapchat"  class="hover:text-brand-red transition"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="#" aria-label="TikTok"    class="hover:text-brand-red transition"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="topbar-line"></div>
+  </div>
+
+  <!-- ============== NAVBAR ============== -->
+  <header id="nav" class="navbar fixed left-0 right-0 top-[36px] z-30 transition-all duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="logo-star group-hover:scale-105 transition"><i class="fa-solid fa-star"></i></span>
+        <span class="font-display text-2xl tracking-[0.18em] leading-none">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/80">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="index.html#bestsellers" class="nav-link">Best sellers</a>
+        <a href="index.html#about" class="nav-link">À propos</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button id="cartBtn" class="relative grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5 hover:border-brand-red transition" aria-label="Mon panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cartCount" class="cart-count">0</span>
+        </button>
+        <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div id="mobileNav" class="fixed inset-0 z-40 hidden">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" data-close></div>
+    <div class="drawer absolute right-0 top-0 h-full w-[85%] max-w-sm border-l border-brand-red/20 bg-brand-ink p-6 overflow-y-auto">
+      <div class="flex items-center justify-between mb-8">
+        <span class="font-display text-2xl tracking-widest">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
+        <button data-close class="grid h-10 w-10 place-items-center rounded-lg bg-white/5"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <nav class="flex flex-col gap-1 text-lg">
+        <a href="index.html"  class="m-link" data-close><i class="fa-solid fa-house mr-3 text-brand-red w-5"></i>Accueil</a>
+        <a href="menu.html"   class="m-link active" data-close><i class="fa-solid fa-utensils mr-3 text-brand-red w-5"></i>Menu</a>
+        <a href="index.html#bestsellers" class="m-link" data-close><i class="fa-solid fa-fire mr-3 text-brand-red w-5"></i>Best sellers</a>
+        <a href="index.html#about" class="m-link" data-close><i class="fa-solid fa-circle-info mr-3 text-brand-red w-5"></i>À propos</a>
+        <a href="index.html#contact" class="m-link" data-close><i class="fa-solid fa-phone mr-3 text-brand-red w-5"></i>Contact</a>
+      </nav>
+      <button class="btn-red mt-8 w-full justify-center" onclick="document.getElementById('cartBtn').click(); document.querySelectorAll('[data-close]').forEach(b=>b.click());">
+        <i class="fa-solid fa-bag-shopping"></i> Voir mon panier
+      </button>
+    </div>
+  </div>
+
+  <!-- ============== MENU HERO ============== -->
+  <section class="menu-hero">
+    <div class="mx-auto max-w-7xl px-4 pt-32 pb-10 lg:pt-40 lg:pb-14">
+      <p class="font-script text-brand-red text-2xl md:text-3xl">La carte complète</p>
+      <h1 class="font-display text-[64px] md:text-[120px] leading-[0.9] tracking-tight">
+        NOTRE <span class="text-brand-red drop-shadow-[0_0_30px_rgba(255,30,30,0.55)]">MENU</span>
+      </h1>
+      <p class="mt-4 max-w-xl text-brand-gray">
+        Tacos signatures, burgers généreux, bowls équilibrés, frites & barquettes, desserts maison
+        et boissons fraîches. Tout est préparé sur place avec des produits frais.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== CATEGORY FILTER ============== -->
+  <div id="filterBar" class="filter-bar sticky top-0 z-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="filter-scroll" id="catFilters">
+        <!-- Filters injected by JS -->
+      </div>
+      <div class="filter-bar-line"></div>
+    </div>
+  </div>
+
+  <!-- ============== SEARCH + COUNT ============== -->
+  <section class="relative z-10 pt-8">
+    <div class="mx-auto max-w-7xl px-4 flex flex-col md:flex-row md:items-center gap-4">
+      <div class="search-box flex-1 max-w-md">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input id="searchInput" type="search" placeholder="Rechercher un produit..." />
+      </div>
+      <p id="resultCount" class="text-sm text-brand-gray"></p>
+    </div>
+  </section>
+
+  <!-- ============== MENU GRID ============== -->
+  <section class="relative z-10 py-10 md:py-14">
+    <div class="mx-auto max-w-7xl px-4">
+      <div id="menuGrid" class="menu-grid">
+        <!-- Products injected by JS -->
+      </div>
+
+      <div id="emptyState" class="empty-state hidden">
+        <i class="fa-regular fa-face-frown"></i>
+        <p>Aucun produit ne correspond à votre recherche.</p>
+        <button class="btn-ghost mt-4" id="clearSearch">Effacer la recherche</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA ============== -->
+  <section class="relative z-10 py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="cta-banner">
+        <div class="cta-banner-inner text-center md:text-left flex flex-col md:flex-row md:items-center gap-6 md:justify-between">
+          <div>
+            <p class="font-script text-brand-red text-xl">Une question ?</p>
+            <h3 class="font-display text-3xl md:text-5xl tracking-wider mt-1">Besoin de conseils ?</h3>
+            <p class="text-brand-gray mt-2">Notre équipe vous répond 7j/7 de 11h à 02h.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 justify-center md:justify-end">
+            <a href="tel:0473000000" class="btn-red btn-lg btn-shine"><i class="fa-solid fa-phone"></i> 04 73 00 00 00</a>
+            <a href="index.html#contact" class="btn-ghost btn-lg"><i class="fa-solid fa-location-dot"></i> Nous trouver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer id="contact" class="relative z-10 border-t border-white/5 bg-black/60 backdrop-blur-md">
+    <div class="mx-auto max-w-7xl px-4 py-14 grid gap-10 md:grid-cols-4">
+      <div>
+        <a href="index.html" class="flex items-center gap-3">
+          <span class="logo-star"><i class="fa-solid fa-star"></i></span>
+          <span class="font-display text-xl tracking-widest">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
+        </a>
+        <p class="mt-4 text-sm text-brand-gray max-w-xs">
+          Premium street food à Clermont-Ferrand. Tacos, burgers, bowls — recettes signatures, produits frais.
+        </p>
+        <div class="mt-5 flex gap-3">
+          <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-snapchat"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="footer-title">Menu</p>
+        <ul class="footer-list">
+          <li><a href="menu.html#tacos-signatures">Tacos Signatures</a></li>
+          <li><a href="menu.html#burgers">Burgers</a></li>
+          <li><a href="menu.html#bowls">Bowls</a></li>
+          <li><a href="menu.html#frites">Frites & Barquettes</a></li>
+          <li><a href="menu.html#desserts">Desserts</a></li>
+          <li><a href="menu.html#boissons">Boissons</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <ul class="footer-list">
+          <li><i class="fa-solid fa-location-dot text-brand-red mr-2"></i> 63 Avenue de la République, Clermont-Ferrand</li>
+          <li><i class="fa-solid fa-phone text-brand-red mr-2"></i> 04 73 00 00 00</li>
+          <li><i class="fa-regular fa-clock text-brand-red mr-2"></i> 7j/7 — 11h00 à 02h00</li>
+          <li><i class="fa-regular fa-envelope text-brand-red mr-2"></i> contact@letoile-clermont.fr</li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-title">Livraison</p>
+        <ul class="footer-list">
+          <li><a href="#"><i class="fa-brands fa-uber text-brand-red mr-2"></i> Uber Eats</a></li>
+          <li><a href="#"><i class="fa-solid fa-bicycle text-brand-red mr-2"></i> Deliveroo</a></li>
+          <li><a href="#"><i class="fa-solid fa-bag-shopping text-brand-red mr-2"></i> Click & Collect</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/5">
+      <div class="mx-auto max-w-7xl px-4 py-5 flex flex-col md:flex-row items-center justify-between text-xs text-brand-gray gap-3">
+        <p>© <span id="year"></span> L'Etoile Clermont — Tous droits réservés.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-white">Mentions légales</a>
+          <a href="#" class="hover:text-white">Confidentialité</a>
+          <a href="#" class="hover:text-white">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== PRODUCT MODAL ============== -->
+  <div id="productModal" class="modal hidden">
+    <div class="modal-bg" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" data-close><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ============== CART DRAWER ============== -->
+  <div id="cartDrawer" class="cart-drawer hidden">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" data-close></div>
+    <aside class="cart-panel">
+      <header class="cart-header">
+        <h3 class="font-display text-2xl tracking-widest">MON PANIER</h3>
+        <button data-close class="grid h-10 w-10 place-items-center rounded-lg bg-white/5"><i class="fa-solid fa-xmark"></i></button>
+      </header>
+      <div id="cartItems" class="cart-items"></div>
+      <footer class="cart-footer">
+        <div class="flex justify-between text-sm text-brand-gray">
+          <span>Sous-total</span>
+          <span id="cartSubtotal" class="text-white font-semibold">0,00 €</span>
+        </div>
+        <div class="flex justify-between text-sm text-brand-gray mt-1">
+          <span>Livraison</span>
+          <span class="text-white">Calculée à l'étape suivante</span>
+        </div>
+        <div class="flex justify-between text-lg mt-4 pt-4 border-t border-white/10">
+          <span class="font-display tracking-widest">TOTAL</span>
+          <span id="cartTotal" class="font-display text-brand-red text-2xl">0,00 €</span>
+        </div>
+        <button id="checkoutBtn" class="btn-red btn-lg w-full justify-center mt-5"><i class="fa-solid fa-bolt"></i> COMMANDER</button>
+        <button id="clearCart" class="text-xs text-brand-gray hover:text-brand-red mt-3 w-full text-center">Vider le panier</button>
+      </footer>
+    </aside>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <a href="#" id="backToTop" class="back-to-top" aria-label="Haut de page"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
