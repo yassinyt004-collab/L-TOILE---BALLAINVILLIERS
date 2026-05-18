@@ -9,6 +9,15 @@
   <meta property="og:title" content="L'Etoile Clermont — Premium Street Food Halal" />
   <meta property="og:description" content="Tacos signatures, burgers, bowls. Le goût qui fait la différence. Commandez en ligne." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:url" content="https://letoile63.eatbu.com/" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="L'Etoile Clermont — Premium Street Food Halal" />
+  <meta name="twitter:description" content="Tacos signatures, burgers, bowls. Le goût qui fait la différence." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>" />
+  <link rel="canonical" href="https://letoile63.eatbu.com/" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -34,6 +43,52 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Restaurant Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "L'Etoile Clermont",
+    "alternateName": "L'Etoile",
+    "description": "Restaurant halal à Clermont-Ferrand. Tacos signatures, burgers, bowls, frites et desserts. Produits frais, recettes maison.",
+    "url": "https://letoile63.eatbu.com/",
+    "telephone": "+33473905738",
+    "email": "lotfourt@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "29 rue Ballainvilliers",
+      "addressLocality": "Clermont-Ferrand",
+      "postalCode": "63000",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.7772,
+      "longitude": 3.0870
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "00:30"
+    },
+    "servesCuisine": ["French Tacos", "Burgers", "Bowls", "Fast Food", "Halal"],
+    "priceRange": "€€",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "2000",
+      "bestRating": "5"
+    },
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80",
+    "sameAs": [
+      "https://www.instagram.com/letoile_clermont/",
+      "https://www.facebook.com/letoileclermont/",
+      "https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw"
+    ]
+  }
+  </script>
 </head>
 
 <body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-red selection:text-white">
@@ -621,7 +676,7 @@
                 </div>
                 <div class="px-5">
                   <p class="font-script text-brand-red text-lg">Bonsoir 👋</p>
-                  <h3 class="font-display text-2xl leading-tight">Envie d'un<br/>tacos ce soir ?</h3>
+                  <h3 class="font-display text-2xl leading-tight">Qu'est-ce qui vous<br/>fait envie ce soir ?</h3>
                   <div class="mt-4 grid grid-cols-3 gap-2 text-[10px] uppercase tracking-widest">
                     <span class="chip active">Tacos</span><span class="chip">Burgers</span><span class="chip">Bowls</span>
                   </div>
@@ -732,12 +787,25 @@
       </div>
     </div>
     <div class="border-t border-white/5">
+      <div id="mentions-legales" class="mx-auto max-w-7xl px-4 py-10 text-xs text-brand-gray leading-relaxed space-y-3">
+        <p class="font-semibold text-white text-sm uppercase tracking-widest mb-4">Mentions légales</p>
+        <p><strong>Raison sociale :</strong> SARL L'ETOILE — Capital social : 1 000 € — SIRET : 52295979 — RCS Clermont-Ferrand</p>
+        <p><strong>Siège social :</strong> 29 rue Ballainvilliers, 63000 Clermont-Ferrand, France</p>
+        <p><strong>Responsable publication :</strong> El Fourti Lotfi — <a href="mailto:lotfourt@gmail.com" class="text-brand-red hover:underline">lotfourt@gmail.com</a></p>
+        <p><strong>Téléphone :</strong> <a href="tel:+33473905738" class="text-brand-red hover:underline">04 73 90 57 38</a></p>
+        <p><strong>Hébergement :</strong> GitHub Pages — GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</p>
+        <p class="pt-4"><strong>Politique de confidentialité :</strong> Ce site ne collecte aucune donnée personnelle. Aucun cookie de tracking n'est utilisé. Le formulaire newsletter est démonstratif et ne stocke pas d'emails.</p>
+        <p><strong>CGV :</strong> Les commandes sont passées via Uber Eats. Les conditions générales de vente applicables sont celles de la plateforme utilisée pour la commande.</p>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5">
       <div class="mx-auto max-w-7xl px-4 py-5 flex flex-col md:flex-row items-center justify-between text-xs text-brand-gray gap-3">
         <p>© <span id="year"></span> SARL L'Etoile — Tous droits réservés · SIRET 52295979</p>
         <div class="flex gap-5">
-          <a href="#" class="hover:text-white">Mentions légales</a>
-          <a href="#" class="hover:text-white">Confidentialité</a>
-          <a href="#" class="hover:text-white">CGV</a>
+          <a href="#mentions-legales" class="hover:text-white">Mentions légales</a>
+          <a href="#mentions-legales" class="hover:text-white">Confidentialité</a>
+          <a href="#mentions-legales" class="hover:text-white">CGV</a>
         </div>
       </div>
     </div>

@@ -233,11 +233,7 @@ h1, h2, h3, h4  { letter-spacing: .015em; }
   filter:
     drop-shadow(0 28px 40px rgba(0,0,0,.85))
     drop-shadow(0 0 22px rgba(255,30,30,.22))
-    saturate(1.05) contrast(1.05);
-}
-.food-chip {
-  object-fit: cover;
-  filter: saturate(.95) contrast(1.08) brightness(.95);
+    saturate(1.08) contrast(1.10) brightness(.93);
 }
 .float-a  { animation: floatY 7s ease-in-out infinite; }
 .float-b  { animation: floatYsmall 6s ease-in-out infinite .4s; }
@@ -579,16 +575,13 @@ h1, h2, h3, h4  { letter-spacing: .015em; }
 
 /* ============================================================
    CINEMATIC IMAGE GRADING — unified across all food images
+   Applies a warm-dark cinematic look to all food photography
    ============================================================ */
 .dish-img,
 .prod-img img,
-.cat-card,
 .about-tile img,
 .phone-card img {
-  filter: saturate(1.06) contrast(1.08) brightness(.96);
-}
-.cat-card { /* already has filter on bg, keep cards consistent */
-  filter: none;
+  filter: saturate(1.08) contrast(1.12) brightness(.92) sepia(.04);
 }
 .dish-img {
   display: block;
@@ -599,7 +592,12 @@ h1, h2, h3, h4  { letter-spacing: .015em; }
 .prod-img img,
 .about-tile img,
 .phone-card img {
-  filter: saturate(1.05) contrast(1.10) brightness(.95);
+  filter: saturate(1.08) contrast(1.12) brightness(.92) sepia(.04);
+}
+/* Food chips in hero get the same grade */
+.food-chip {
+  object-fit: cover;
+  filter: saturate(1.06) contrast(1.10) brightness(.93) sepia(.03);
 }
 
 /* ----- About mosaic ----- */
