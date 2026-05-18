@@ -1,99 +1,227 @@
-# L'Etoile Clermont — Premium Fast-Food Website
+# 🍔 L’Etoile Ballainvilliers — Premium Fast-Food Website
 
-A cinematic, dark-luxury landing page for **L'Etoile Clermont** — a premium street-food brand in Clermont-Ferrand serving French tacos, burgers, bowls, fries, desserts and drinks.
+A modern premium fast-food restaurant website inspired by luxury food delivery experiences and cinematic restaurant branding.
 
-The design combines deep blacks, vibrant red accents, glassmorphism, smoke and red-glow effects to deliver a high-end, conversion-focused experience inspired by modern SaaS landing pages and luxury fast-food campaigns.
+This project recreates and modernizes the experience of a traditional fast-food restaurant website with a high-end UI/UX approach.
 
-## Live preview
+---
 
-This is a static site — open `index.html` directly in your browser, or serve the folder with any static HTTP server:
+# ✨ Overview
 
-```bash
-# any of these works
-python3 -m http.server 8080
-npx serve .
-```
+L’Etoile Ballainvilliers is a modern restaurant website designed for:
 
-Then visit http://localhost:8080.
+* French tacos
+* Burgers
+* Bowls
+* Fries & barquettes
+* Desserts
+* Drinks
 
-## Tech stack
+The goal of the project is to combine:
 
-- **HTML5** — semantic single-page structure
-- **Tailwind CSS** (CDN) with a custom theme (brand colors, fonts, shadows)
-- **Custom CSS** (`css/style.css`) for cinematic effects: red glows, smoke, particles, glassmorphism, floating animations, ribbon marquee, phone mockup, reveal-on-scroll
-- **Vanilla JS** (`js/main.js`) — no framework, no build step
-- **Google Fonts**: Bebas Neue, Caveat, Inter
-- **Font Awesome 6** icons
+* premium branding
+* cinematic food presentation
+* smooth user experience
+* responsive design
+* modern landing page aesthetics
+* practical restaurant menu navigation
 
-## Sections
+---
 
-1. **Top bar** — opening hours, address, social icons (Instagram, Facebook, Snapchat, TikTok)
-2. **Navbar** — logo (red star + wordmark), main menu, fixed-on-scroll, red CTA "COMMANDER"
-3. **Hero** — handwritten red slogan, huge display title, paragraph, dual CTAs, social proof (avatars + 4.8/5 rating + 1200+ reviews), 3 mini-stats, cinematic food composition with floating tags and red particles
-4. **Features** — 3 glassmorphism cards (Produits frais / Fait maison / Livraison rapide)
-5. **Menu categories** — 6 image cards with red CTAs (Tacos, Burgers, Bowls, Frites & Barquettes, Desserts, Boissons)
-6. **Signature products** — animated marquee ribbon + 4 product cards (O'Merveille, O'Spicy, Double Cheese, Frites Cheddar Bacon) with prices and add-to-cart
-7. **About** — image mosaic + brand story, value list and stats
-8. **Reviews** — auto-advancing draggable slider with glass cards
-9. **Delivery** — Uber Eats / Deliveroo / Click & Collect, stats and a realistic phone mockup
-10. **Footer** — brand recap, menu, contact, newsletter, socials, legal links
-11. **Floating CTA** (mobile) — pulsing "Commander" button
+# 🎨 Design Direction
 
-## Design system
+The website uses a strong visual identity based on:
 
-| Token | Value |
-| --- | --- |
-| Primary red | `#ff1e1e` |
-| Red gradient | `#ff1e1e → #c70000` |
-| Ink / Dark | `#050505` / `#0a0a0a` |
-| Charcoal | `#141414` |
-| Body text | `#ffffff` |
-| Muted text | `#a8a8a8` |
-| Display font | Bebas Neue |
-| Script font | Caveat |
-| Body font | Inter |
+* Deep black backgrounds
+* Red premium accents
+* White typography
+* Cinematic lighting
+* Glassmorphism effects
+* Smooth gradients
+* Modern shadows and glow effects
 
-Effects: red neon glow, soft cinematic shadows, glassmorphism (blur + tinted bg), grainy noise overlay, smoke blobs, particles, marquee, parallax, reveal-on-scroll.
+Inspired by:
 
-## Animations
+* Burger King premium campaigns
+* Five Guys branding
+* Uber Eats UI
+* Deliveroo experiences
+* Modern SaaS landing pages
 
-- Smooth navbar morph on scroll
-- Floating food images and tags
-- Rotating glow ring behind hero composition
-- Rising red particles
-- Pulsing CTA button
-- Marquee ribbon
-- Hover micro-interactions (lift, glow, underline)
-- IntersectionObserver-based fade-in
-- Subtle mouse parallax on the hero composition
-- Full `prefers-reduced-motion` support
+---
 
-## Responsive
+# 🖥️ Features
 
-Mobile-first layout with:
+## 🔥 Hero Section
 
-- Hamburger drawer with full menu and contact info
-- Hidden desktop-only details on small screens
-- Floating bottom CTA button on mobile
-- Fluid typography via Tailwind + `clamp()`
-- Phone mockup that scales gracefully
+* Cinematic food composition
+* Premium burger visuals
+* French tacos showcase
+* CTA buttons
+* Dynamic gradients
+* Modern typography
 
-## File structure
+## 🍽️ Menu Categories
 
-```
-.
-├── index.html        # full page markup
-├── css/
-│   └── style.css     # cinematic effects + components
-├── js/
-│   └── main.js       # interactions
-└── README.md
-```
+* Tacos Signatures
+* Tacos à Composer
+* Burgers
+* Bowls
+* Frites & Barquettes
+* Desserts
+* Boissons
 
-## Image sources
+## ⭐ Product Cards
 
-All photography is sourced from **Unsplash** (free to use) using premium food keywords (cinematic burger, french tacos, crispy fries, etc.).
+Each product card includes:
 
-## License
+* Premium food image
+* Product title
+* Price
+* Description
+* Hover effects
+* Smooth transitions
 
-Code is provided as-is for the L'Etoile Clermont brand. Replace placeholder photos and copy before production use.
+## 📱 Responsive Design
+
+* Mobile-first experience
+* Tablet optimization
+* Desktop premium layout
+* Responsive cards and typography
+
+## 🎥 Animations
+
+* Hover interactions
+* Smooth transitions
+* Reveal effects
+* Floating visual elements
+* Modern UI micro-interactions
+
+---
+
+# 🍔 Example Menu Items
+
+## 🌮 Tacos Signatures
+
+* O’Merveille — 10€
+* O’Thentik — 12€
+* O’Chevre Miel — 10€
+* O’Spicy — 12€
+* O’Riginal — 12€
+* Doritos — 12€
+
+## 🍔 Burgers
+
+* Cheese Burger — 7.90€
+* Double Cheese — 8.90€
+* Triple Cheese — 9.90€
+* Royal Bacon — 9.90€
+* Mac Burger — 9.90€
+
+## 🍟 Fries & Barquettes
+
+* Moyenne Frites — 3.90€
+* Grande Frites — 4.90€
+* Frites Cheddar Bacon — 5.90€
+* Barquette Kebab — 12€
+
+## 🍰 Desserts
+
+* Cheesecake Cookies — 4.50€
+* Tiramisu Caramel Spéculos — 4.50€
+* Panini Nutella — 5.90€
+
+## 🥤 Drinks
+
+* Coca-Cola
+* Fanta
+* Sprite
+* Oasis
+* Monster
+
+---
+
+# ⚙️ Tech Stack
+
+## Frontend
+
+* Next.js
+* React
+* Tailwind CSS
+* Framer Motion
+
+## UI/UX
+
+* Responsive Design
+* Glassmorphism
+* Modern Animations
+* Premium Food Photography
+
+## Deployment
+
+* Vercel
+
+---
+
+# 📸 Assets & Resources
+
+Food images and inspirations sourced from:
+
+* Freepik
+* Unsplash
+* Pexels
+* Shutterstock
+* Adobe Stock
+* Envato Elements
+
+---
+
+# 🚀 Performance Goals
+
+* Fast loading
+* Optimized images
+* Smooth scrolling
+* Responsive experience
+* Mobile optimization
+* SEO-friendly structure
+
+---
+
+# 🎯 Project Goals
+
+The objective of this project is to create:
+
+* a realistic restaurant website
+* a premium digital brand
+* a visually immersive experience
+* a conversion-focused landing page
+* a modern fast-food online presence
+
+---
+
+# 📱 Future Improvements
+
+Planned enhancements:
+
+* Online ordering system
+* Shopping cart
+* Payment integration
+* Delivery tracking
+* Customer authentication
+* Admin dashboard
+* CMS integration
+* Reviews system
+* Loyalty program
+* Dark/light mode
+
+---
+
+# 👨‍💻 Author
+
+Created as a modern premium restaurant web experience project.
+
+---
+
+# 📄 License
+
+This project is for educational and portfolio purposes.
