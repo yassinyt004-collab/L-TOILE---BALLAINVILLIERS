@@ -1,14 +1,20 @@
-/* L'Etoile Clermont — Interactions
+/* L'Etoile Clermont — Interactions (polished)
    - Navbar scroll state
    - Mobile drawer
-   - Reveal-on-scroll
-   - Reviews slider (drag + buttons)
-   - Hero red particles
+   - Reveal-on-scroll with stagger
+   - Reviews slider (drag + buttons + autoplay)
+   - Hero red particles (lighter, pause when off-screen)
+   - Sticky menu tabs: scroll-spy + smooth scroll
+   - Menu search filter (categories + signature products)
+   - Smooth-scroll offset for fixed nav + sticky tabs
+   - Subtle parallax on hero composition (rAF, throttled)
    - Year stamp
 */
 
 (() => {
   'use strict';
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Year ---------- */
   const yearEl = document.getElementById('year');
@@ -27,8 +33,14 @@
   /* ---------- Mobile drawer ---------- */
   const menuBtn   = document.getElementById('menuBtn');
   const mobileNav = document.getElementById('mobileNav');
-  const openNav  = () => mobileNav?.classList.remove('hidden');
-  const closeNav = () => mobileNav?.classList.add('hidden');
+  const openNav  = () => {
+    mobileNav?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeNav = () => {
+    mobileNav?.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
 
   menuBtn?.addEventListener('click', openNav);
   mobileNav?.querySelectorAll('[data-close]').forEach(el => {
@@ -38,8 +50,19 @@
     if (e.key === 'Escape') closeNav();
   });
 
-  /* ---------- Reveal-on-scroll ---------- */
+  /* ---------- Reveal-on-scroll with stagger ---------- */
   const reveals = document.querySelectorAll('.reveal');
+  // Auto-assign --i within each parent group when not explicitly set
+  const groups = new Map();
+  reveals.forEach((el) => {
+    if (el.style.getPropertyValue('--i')) return;
+    const parent = el.parentElement;
+    if (!groups.has(parent)) groups.set(parent, 0);
+    const idx = groups.get(parent);
+    el.style.setProperty('--i', String(idx));
+    groups.set(parent, idx + 1);
+  });
+
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -72,7 +95,7 @@
       });
     });
 
-    // drag to scroll
+    // drag to scroll (mouse + touch via native)
     let isDown = false, startX = 0, startScroll = 0;
     track.addEventListener('mousedown', (e) => {
       isDown = true; startX = e.pageX; startScroll = track.scrollLeft;
@@ -89,6 +112,7 @@
     let timer = null;
     const start = () => {
       stop();
+      if (reduceMotion) return;
       timer = setInterval(() => {
         if (document.hidden) return;
         const max = track.scrollWidth - track.clientWidth - 4;
@@ -102,52 +126,140 @@
     start();
   }
 
-  /* ---------- Hero particles ---------- */
+  /* ---------- Hero particles (lighter & paused off-screen) ---------- */
   const particlesRoot = document.getElementById('particles');
-  if (particlesRoot && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const COUNT = 22;
+  if (particlesRoot && !reduceMotion) {
+    const COUNT = 14;
     for (let i = 0; i < COUNT; i++) {
       const p = document.createElement('span');
       p.className = 'particle';
       p.style.left = Math.random() * 100 + '%';
       p.style.bottom = Math.random() * 30 + '%';
-      p.style.animationDuration = (4 + Math.random() * 6) + 's';
+      p.style.animationDuration = (5 + Math.random() * 6) + 's';
       p.style.animationDelay = (Math.random() * 6) + 's';
-      p.style.opacity = (0.3 + Math.random() * 0.6).toFixed(2);
-      const size = 2 + Math.random() * 3;
+      p.style.opacity = (0.25 + Math.random() * 0.45).toFixed(2);
+      const size = 2 + Math.random() * 2;
       p.style.width = size + 'px';
       p.style.height = size + 'px';
       particlesRoot.appendChild(p);
     }
+
+    // pause when hero is offscreen
+    const hero = particlesRoot.closest('.hero');
+    if (hero && 'IntersectionObserver' in window) {
+      const heroIO = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          particlesRoot.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+          particlesRoot.querySelectorAll('.particle').forEach(p => {
+            p.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+          });
+        });
+      }, { threshold: 0 });
+      heroIO.observe(hero);
+    }
   }
 
   /* ---------- Smooth-scroll offset for fixed navbar ---------- */
+  const SCROLL_OFFSET = 110;
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
-      if (id.length < 2) return;
+      if (!id || id.length < 2) return;
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const offset = 90;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      const top = target.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
       window.scrollTo({ top, behavior: 'smooth' });
       closeNav();
     });
   });
 
-  /* ---------- Subtle parallax for hero food ---------- */
+  /* ---------- Subtle hero parallax (rAF, gentle) ---------- */
   const composition = document.querySelector('.float-a');
   const chips = document.querySelectorAll('.food-chip');
-  if (composition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5);
-      const y = (e.clientY / window.innerHeight - 0.5);
-      composition.style.setProperty('translate', `${x * 14}px ${y * 10}px`);
+  if (composition && !reduceMotion && window.matchMedia('(pointer: fine)').matches) {
+    let mx = 0, my = 0, ticking = false;
+    const apply = () => {
+      ticking = false;
+      composition.style.translate = `${mx * 10}px ${my * 7}px`;
       chips.forEach((c, i) => {
-        const f = (i + 1) * 8;
-        c.style.setProperty('translate', `${-x * f}px ${-y * f}px`);
+        const f = (i + 1) * 5;
+        c.style.translate = `${-mx * f}px ${-my * f}px`;
       });
+    };
+    window.addEventListener('mousemove', (e) => {
+      mx = (e.clientX / window.innerWidth - 0.5);
+      my = (e.clientY / window.innerHeight - 0.5);
+      if (!ticking) { ticking = true; requestAnimationFrame(apply); }
     }, { passive: true });
+  }
+
+  /* ---------- Sticky menu tabs: scroll-spy + click ---------- */
+  const tabs = document.querySelectorAll('#menuTabs .menu-tab');
+  if (tabs.length) {
+    const sectionMap = new Map();
+    tabs.forEach(tab => {
+      const id = tab.dataset.target;
+      const section = id ? document.getElementById(id) : null;
+      if (section) sectionMap.set(section, tab);
+    });
+
+    if ('IntersectionObserver' in window && sectionMap.size) {
+      const setActive = (tab) => {
+        tabs.forEach(t => t.classList.remove('is-active'));
+        tab.classList.add('is-active');
+        // keep active tab visible on horizontal scroll
+        const container = tab.parentElement;
+        if (container) {
+          const tabBox = tab.getBoundingClientRect();
+          const cBox = container.getBoundingClientRect();
+          if (tabBox.left < cBox.left + 12 || tabBox.right > cBox.right - 12) {
+            const targetLeft = tab.offsetLeft - container.clientWidth / 2 + tab.offsetWidth / 2;
+            container.scrollTo({ left: targetLeft, behavior: 'smooth' });
+          }
+        }
+      };
+
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const tab = sectionMap.get(e.target);
+            if (tab) setActive(tab);
+          }
+        });
+      }, {
+        rootMargin: '-180px 0px -60% 0px',
+        threshold: [0.01, 0.2]
+      });
+      sectionMap.forEach((_, section) => spy.observe(section));
+    }
+  }
+
+  /* ---------- Menu search / filter ---------- */
+  const searchEl = document.getElementById('menuSearch');
+  const emptyMsg = document.getElementById('emptyMsg');
+  const allCards = document.querySelectorAll('.menu-section .prod-card[data-name]');
+  if (searchEl && allCards.length) {
+    const norm = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const apply = () => {
+      const q = norm(searchEl.value.trim());
+      let visible = 0;
+      allCards.forEach(card => {
+        const hay = norm(card.dataset.name) + ' ' + norm(card.textContent);
+        const match = !q || hay.includes(q);
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      // show/hide section headers if all cards in that section are hidden
+      document.querySelectorAll('.menu-section').forEach(sec => {
+        const cards = sec.querySelectorAll('.prod-card[data-name]');
+        const anyVisible = Array.from(cards).some(c => c.style.display !== 'none');
+        sec.style.display = (q && !anyVisible) ? 'none' : '';
+      });
+      if (emptyMsg) emptyMsg.classList.toggle('hidden', !(q && visible === 0));
+    };
+    let t;
+    searchEl.addEventListener('input', () => { clearTimeout(t); t = setTimeout(apply, 80); });
+    searchEl.addEventListener('search', apply);
   }
 })();
