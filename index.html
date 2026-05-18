@@ -5,60 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0a" />
   <title>L'Etoile Clermont — Tacos, Burgers & Bowls premium à Clermont-Ferrand</title>
-  <meta name="description" content="L'Etoile Clermont — Tacos, burgers, bowls et desserts. Produits frais, recettes uniques. Livraison rapide à Clermont-Ferrand. Commandez en ligne 7j/7." />
-  <meta property="og:title" content="L'Etoile Clermont — Premium Street Food" />
-  <meta property="og:description" content="Tacos, Burgers, Bowls. Le goût qui fait la différence." />
+  <meta name="description" content="L'Etoile — Restaurant halal à Clermont-Ferrand. Tacos signatures, burgers, bowls, frites et desserts. Livraison Uber Eats. 29 rue Ballainvilliers." />
+  <meta property="og:title" content="L'Etoile Clermont — Premium Street Food Halal" />
+  <meta property="og:description" content="Tacos signatures, burgers, bowls. Le goût qui fait la différence. Commandez en ligne." />
   <meta property="og:type" content="website" />
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brand: {
-              red:    '#ff1e1e',
-              red2:   '#ff3a3a',
-              dark:   '#0a0a0a',
-              ink:    '#050505',
-              char:   '#141414',
-              line:   '#1f1f1f',
-              gray:   '#a8a8a8',
-            }
+            brand: { red:'#ff1e1e', red2:'#ff3a3a', dark:'#0a0a0a', ink:'#050505', char:'#141414', line:'#1f1f1f', gray:'#a8a8a8' }
           },
           fontFamily: {
-            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
-            sans:    ['Inter', 'system-ui', 'sans-serif'],
-            script:  ['"Caveat"', 'cursive'],
-          },
-          boxShadow: {
-            glow:   '0 0 30px rgba(255,30,30,.45), 0 0 70px rgba(255,30,30,.18)',
-            soft:   '0 30px 60px -20px rgba(0,0,0,.7)',
+            display: ['"Bebas Neue"','Impact','sans-serif'],
+            sans: ['Inter','system-ui','sans-serif'],
+            script: ['"Caveat"','cursive'],
           }
         }
       }
     }
   </script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-  <!-- Preload key hero asset -->
   <link rel="preload" as="image" href="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" />
-
-  <!-- Custom -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-red selection:text-white">
 
-  <!-- Cinematic background layers -->
   <div class="bg-grain pointer-events-none fixed inset-0 z-0"></div>
   <div class="bg-glow-1 pointer-events-none fixed -top-40 -left-40 h-[520px] w-[520px] rounded-full blur-[160px] z-0"></div>
   <div class="bg-glow-2 pointer-events-none fixed top-1/3 -right-40 h-[440px] w-[440px] rounded-full blur-[160px] z-0"></div>
@@ -67,15 +46,16 @@
   <div class="topbar relative z-40 border-b border-brand-red/20 bg-black/70 backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[12px] text-brand-gray">
       <div class="flex items-center gap-5">
-        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 de 11h00 à 02h00</span>
-        <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-red"></i> 63 Avenue de la République, Clermont-Ferrand</span>
+        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 · 10h00 – 00h30</span>
+        <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-red"></i> 29 rue Ballainvilliers, 63000 Clermont-Ferrand</span>
+        <span class="hidden lg:flex items-center gap-2"><i class="fa-solid fa-certificate text-brand-red"></i> Certifié Halal</span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="tel:+33473000000" class="hidden sm:inline-flex items-center gap-2 hover:text-brand-red transition"><i class="fa-solid fa-phone"></i> 04 73 00 00 00</a>
-        <a href="#" aria-label="Instagram" class="hover:text-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="Facebook"  class="hover:text-brand-red transition"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" aria-label="Snapchat"  class="hover:text-brand-red transition"><i class="fa-brands fa-snapchat"></i></a>
-        <a href="#" aria-label="TikTok"    class="hover:text-brand-red transition"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="tel:+33473905738" class="hidden sm:inline-flex items-center gap-2 hover:text-brand-red transition"><i class="fa-solid fa-phone"></i> 04 73 90 57 38</a>
+        <a href="https://www.instagram.com/letoile_clermont/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/letoileclermont/" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-brand-red transition"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.snapchat.com/add/letoile_clermont" target="_blank" rel="noopener" aria-label="Snapchat" class="hover:text-brand-red transition"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="https://www.tiktok.com/@letoile_clermont" target="_blank" rel="noopener" aria-label="TikTok" class="hover:text-brand-red transition"><i class="fa-brands fa-tiktok"></i></a>
       </div>
     </div>
     <div class="topbar-line"></div>
@@ -84,34 +64,22 @@
   <!-- ============== NAVBAR ============== -->
   <header id="nav" class="navbar fixed left-0 right-0 top-[36px] z-30 transition-all duration-300">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-      <!-- Logo -->
       <a href="#home" class="flex items-center gap-3">
-        <span class="logo-star">
-          <i class="fa-solid fa-star"></i>
-        </span>
+        <span class="logo-star"><i class="fa-solid fa-star"></i></span>
         <span class="font-display text-2xl tracking-[0.18em]">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
       </a>
-
-      <!-- Center menu -->
       <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/80">
-        <a href="#home"     class="nav-link">Accueil</a>
-        <a href="#menu"     class="nav-link">Menu</a>
-        <a href="#commander" class="nav-link">Signature</a>
-        <a href="#about"    class="nav-link">À propos</a>
+        <a href="#home" class="nav-link">Accueil</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#livraison" class="nav-link">Livraison</a>
         <a href="#location" class="nav-link">Adresse</a>
-        <a href="#contact"  class="nav-link">Contact</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
-
       <div class="flex items-center gap-3">
-        <a href="tel:+33473000000" class="btn-ghost hidden md:inline-flex">
-          <i class="fa-solid fa-phone"></i> 04 73 00 00 00
-        </a>
-        <a href="#commander" class="btn-red hidden sm:inline-flex">
-          <i class="fa-solid fa-bag-shopping"></i> COMMANDER
-        </a>
-        <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5" aria-label="Ouvrir le menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <a href="tel:+33473905738" class="btn-ghost hidden md:inline-flex"><i class="fa-solid fa-phone"></i> APPELER</a>
+        <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red hidden sm:inline-flex"><i class="fa-solid fa-bag-shopping"></i> COMMANDER</a>
+        <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </header>
@@ -121,50 +89,34 @@
     <div class="absolute inset-0 bg-black/80 backdrop-blur-md" data-close></div>
     <div class="absolute right-0 top-0 h-full w-[82%] max-w-sm border-l border-brand-red/20 bg-brand-ink p-6 overflow-y-auto">
       <div class="flex items-center justify-between mb-8">
-        <span class="font-display text-2xl tracking-widest">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
-        <button data-close class="grid h-10 w-10 place-items-center rounded-lg bg-white/5" aria-label="Fermer le menu"><i class="fa-solid fa-xmark"></i></button>
+        <span class="font-display text-2xl tracking-widest">L'ETOILE</span>
+        <button data-close class="grid h-10 w-10 place-items-center rounded-lg bg-white/5" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <nav class="flex flex-col gap-1 text-lg">
-        <a href="#home"      class="m-link" data-close>Accueil</a>
-        <a href="#menu"      class="m-link" data-close>Menu</a>
-        <a href="#tacos"     class="m-link" data-close>Tacos</a>
-        <a href="#burgers"   class="m-link" data-close>Burgers</a>
-        <a href="#bowls"     class="m-link" data-close>Bowls</a>
-        <a href="#frites"    class="m-link" data-close>Frites & Barquettes</a>
-        <a href="#desserts"  class="m-link" data-close>Desserts</a>
-        <a href="#boissons"  class="m-link" data-close>Boissons</a>
-        <a href="#about"     class="m-link" data-close>À propos</a>
-        <a href="#location"  class="m-link" data-close>Adresse</a>
-        <a href="#contact"   class="m-link" data-close>Contact</a>
+        <a href="#home" class="m-link" data-close>Accueil</a>
+        <a href="#menu" class="m-link" data-close>Menu</a>
+        <a href="#tacos-signatures" class="m-link" data-close>Tacos Signatures</a>
+        <a href="#tacos-composer" class="m-link" data-close>Tacos à Composer</a>
+        <a href="#burgers" class="m-link" data-close>Burgers</a>
+        <a href="#bowls" class="m-link" data-close>Bowls</a>
+        <a href="#frites" class="m-link" data-close>Frites & Barquettes</a>
+        <a href="#desserts" class="m-link" data-close>Desserts</a>
+        <a href="#boissons" class="m-link" data-close>Boissons</a>
+        <a href="#about" class="m-link" data-close>À propos</a>
+        <a href="#location" class="m-link" data-close>Adresse</a>
       </nav>
-      <a href="#commander" class="btn-red mt-8 w-full justify-center" data-close>
-        <i class="fa-solid fa-bag-shopping"></i> COMMANDER
-      </a>
-      <a href="tel:+33473000000" class="btn-ghost mt-3 w-full justify-center" data-close>
-        <i class="fa-solid fa-phone"></i> 04 73 00 00 00
-      </a>
-      <div class="mt-8 border-t border-white/10 pt-6 text-sm text-brand-gray">
-        <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 — 11h00 à 02h00</p>
-        <p class="mt-2 flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-red mt-1"></i> 63 Avenue de la République,<br/>Clermont-Ferrand</p>
-        <div class="mt-5 flex gap-4 text-lg">
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-snapchat"></i></a>
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-tiktok"></i></a>
-        </div>
-      </div>
+      <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red mt-8 w-full justify-center" data-close><i class="fa-solid fa-bag-shopping"></i> COMMANDER</a>
+      <a href="tel:+33473905738" class="btn-ghost mt-3 w-full justify-center" data-close><i class="fa-solid fa-phone"></i> 04 73 90 57 38</a>
     </div>
   </div>
 
   <!-- ============== HERO ============== -->
   <section id="home" class="hero">
-    <!-- Smoke / particles -->
     <div class="smoke smoke-a"></div>
     <div class="smoke smoke-b"></div>
     <div id="particles" class="pointer-events-none absolute inset-0"></div>
 
     <div class="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
-      <!-- Left -->
       <div class="relative">
         <p class="hero-eyebrow font-script text-brand-red mb-3 reveal" style="--i:0">Le goût qui fait la différence</p>
         <h1 class="hero-title font-display reveal" style="--i:1">
@@ -172,510 +124,534 @@
           <span class="accent">CLERMONT</span>
         </h1>
         <p class="hero-lead reveal" style="--i:2">
-          Tacos, burgers, bowls et plus encore.
-          Des produits frais, des recettes uniques,
-          et toujours avec le sourire.
+          Tacos signatures, burgers généreux, bowls frais et desserts gourmands.
+          Des produits frais, des recettes uniques, certifié halal.
+          Livraison rapide à Clermont-Ferrand et alentours.
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4 reveal" style="--i:3">
-          <a href="#commander" class="btn-red btn-lg"><i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE</a>
+          <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-lg"><i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE</a>
           <a href="#menu" class="btn-ghost btn-lg"><i class="fa-solid fa-utensils"></i> VOIR LE MENU</a>
         </div>
 
-        <!-- Social proof -->
         <div class="mt-10 flex items-center gap-4 reveal" style="--i:4">
           <div class="flex -space-x-3">
             <img loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=14" alt="" />
             <img loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=32" alt="" />
             <img loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=47" alt="" />
             <img loading="lazy" class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=58" alt="" />
-            <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-xs font-bold ring-2 ring-brand-dark">+1k</span>
+            <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-xs font-bold ring-2 ring-brand-dark">2k+</span>
           </div>
           <div class="text-sm">
-            <div class="text-brand-red text-base">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-brand-gray">4,8/5 sur plus de 1200 avis</p>
+            <div class="text-brand-red text-base"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <p class="text-brand-gray">4,3/5 sur Uber Eats · +2000 avis</p>
           </div>
         </div>
 
-        <!-- Mini stats -->
         <div class="mt-10 grid grid-cols-3 gap-4 max-w-md reveal" style="--i:5">
-          <div><div class="font-display text-3xl text-brand-red">15+</div><div class="text-xs text-brand-gray uppercase tracking-widest">Recettes signature</div></div>
-          <div><div class="font-display text-3xl text-brand-red">25min</div><div class="text-xs text-brand-gray uppercase tracking-widest">Livraison moyenne</div></div>
-          <div><div class="font-display text-3xl text-brand-red">100%</div><div class="text-xs text-brand-gray uppercase tracking-widest">Frais & maison</div></div>
+          <div><div class="font-display text-3xl text-brand-red">30+</div><div class="text-xs text-brand-gray uppercase tracking-widest">Recettes</div></div>
+          <div><div class="font-display text-3xl text-brand-red">25min</div><div class="text-xs text-brand-gray uppercase tracking-widest">Livraison</div></div>
+          <div><div class="font-display text-3xl text-brand-red">Halal</div><div class="text-xs text-brand-gray uppercase tracking-widest">Certifié</div></div>
         </div>
       </div>
 
-      <!-- Right — Food composition -->
       <div class="relative h-[420px] md:h-[600px] reveal" style="--i:2">
-        <!-- glow disc (softened) -->
         <div class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,30,30,.30),transparent_60%)] blur-2xl"></div>
         <div class="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-red/25 animate-spin-slow"></div>
-        <div class="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-red/10"></div>
-
-        <!-- Burger main -->
-        <img class="food-img float-a absolute left-1/2 top-1/2 h-[380px] md:h-[500px] -translate-x-1/2 -translate-y-1/2 object-contain"
-             src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
-             alt="Double cheeseburger signature L'Etoile" />
-
-        <!-- Tacos floating -->
-        <img loading="lazy" class="food-chip float-b absolute -left-2 top-10 h-28 w-28 md:h-40 md:w-40 rounded-3xl object-cover ring-1 ring-white/10 shadow-soft"
-             src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80"
-             alt="French tacos" />
-
-        <!-- Fries floating -->
-        <img loading="lazy" class="food-chip float-c absolute right-0 bottom-8 h-28 w-28 md:h-40 md:w-40 rounded-3xl object-cover ring-1 ring-white/10 shadow-soft"
-             src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
-             alt="Frites cheddar" />
-
-        <!-- Floating tag -->
+        <img class="food-img float-a absolute left-1/2 top-1/2 h-[380px] md:h-[500px] -translate-x-1/2 -translate-y-1/2 object-contain" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" alt="Burger signature L'Etoile Clermont" />
+        <img loading="lazy" class="food-chip float-b absolute -left-2 top-10 h-28 w-28 md:h-40 md:w-40 rounded-3xl object-cover ring-1 ring-white/10" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="French tacos" />
+        <img loading="lazy" class="food-chip float-c absolute right-0 bottom-8 h-28 w-28 md:h-40 md:w-40 rounded-3xl object-cover ring-1 ring-white/10" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80" alt="Frites cheddar" />
         <div class="float-d absolute right-2 top-6 glass px-4 py-3 rounded-2xl">
           <div class="flex items-center gap-3">
-            <div class="grid h-9 w-9 place-items-center rounded-full bg-brand-red shadow-glow"><i class="fa-solid fa-fire"></i></div>
-            <div>
-              <p class="text-xs uppercase tracking-widest text-brand-gray">Best seller</p>
-              <p class="text-sm font-semibold">O'Merveille Taco</p>
-            </div>
+            <div class="grid h-9 w-9 place-items-center rounded-full bg-brand-red"><i class="fa-solid fa-fire"></i></div>
+            <div><p class="text-xs uppercase tracking-widest text-brand-gray">Best seller</p><p class="text-sm font-semibold">O'Merveille</p></div>
           </div>
         </div>
-
         <div class="float-e absolute -bottom-2 left-2 glass px-4 py-3 rounded-2xl">
           <div class="flex items-center gap-3">
-            <div class="grid h-9 w-9 place-items-center rounded-full bg-white/10"><i class="fa-solid fa-bolt text-brand-red"></i></div>
-            <div>
-              <p class="text-xs uppercase tracking-widest text-brand-gray">Livraison</p>
-              <p class="text-sm font-semibold">~ 25 min à Clermont</p>
-            </div>
+            <div class="grid h-9 w-9 place-items-center rounded-full bg-white/10"><i class="fa-solid fa-certificate text-brand-red"></i></div>
+            <div><p class="text-xs uppercase tracking-widest text-brand-gray">Certifié</p><p class="text-sm font-semibold">100% Halal</p></div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- scroll cue -->
-    <div class="mt-16 flex justify-center">
-      <div class="scroll-cue"><span></span></div>
-    </div>
+    <div class="mt-16 flex justify-center"><div class="scroll-cue"><span></span></div></div>
   </section>
 
   <!-- ============== FEATURES ============== -->
   <section class="relative z-10 py-16 md:py-20">
-    <div class="mx-auto max-w-7xl px-4 grid gap-6 md:grid-cols-3">
+    <div class="mx-auto max-w-7xl px-4 grid gap-6 md:grid-cols-4">
       <article class="feature-card reveal" style="--i:0">
-        <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-        <h3 class="font-display text-2xl tracking-wider">PRODUITS FRAIS</h3>
-        <p class="text-brand-gray mt-2">Sourcés et préparés chaque jour pour une qualité garantie.</p>
+        <div class="feature-icon"><i class="fa-solid fa-certificate"></i></div>
+        <h3 class="font-display text-xl tracking-wider">CERTIFIÉ HALAL</h3>
+        <p class="text-brand-gray mt-2 text-sm">Viandes et produits certifiés halal.</p>
       </article>
       <article class="feature-card reveal" style="--i:1">
-        <div class="feature-icon"><i class="fa-solid fa-fire-burner"></i></div>
-        <h3 class="font-display text-2xl tracking-wider">FAIT MAISON</h3>
-        <p class="text-brand-gray mt-2">Recettes signatures, sauces maison, cuisson minute.</p>
+        <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3 class="font-display text-xl tracking-wider">PRODUITS FRAIS</h3>
+        <p class="text-brand-gray mt-2 text-sm">Préparés chaque jour avec soin.</p>
       </article>
       <article class="feature-card reveal" style="--i:2">
+        <div class="feature-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <h3 class="font-display text-xl tracking-wider">FAIT MAISON</h3>
+        <p class="text-brand-gray mt-2 text-sm">Sauces et recettes signatures.</p>
+      </article>
+      <article class="feature-card reveal" style="--i:3">
         <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
-        <h3 class="font-display text-2xl tracking-wider">LIVRAISON RAPIDE</h3>
-        <p class="text-brand-gray mt-2">Clermont-Ferrand & alentours · 25 min en moyenne.</p>
+        <h3 class="font-display text-xl tracking-wider">LIVRAISON RAPIDE</h3>
+        <p class="text-brand-gray mt-2 text-sm">~25 min via Uber Eats.</p>
       </article>
     </div>
   </section>
+
 
   <!-- ============== MENU ============== -->
   <section id="menu" class="relative z-10 py-16 md:py-24">
     <div class="mx-auto max-w-7xl px-4">
       <div class="mb-8 text-center reveal">
         <p class="font-script text-brand-red text-2xl">Notre carte</p>
-        <h2 class="section-title">Découvrez nos catégories</h2>
+        <h2 class="section-title">Le Menu</h2>
         <div class="title-underline"></div>
       </div>
 
-      <!-- Sticky tabs + search -->
+      <!-- Sticky tabs -->
       <div class="menu-tabs-wrap">
         <div class="menu-tabs" id="menuTabs">
-          <a href="#tacos"    class="menu-tab" data-target="tacos"><i class="fa-solid fa-pepper-hot"></i> Tacos</a>
-          <a href="#burgers"  class="menu-tab" data-target="burgers"><i class="fa-solid fa-burger"></i> Burgers</a>
-          <a href="#bowls"    class="menu-tab" data-target="bowls"><i class="fa-solid fa-bowl-food"></i> Bowls</a>
-          <a href="#frites"   class="menu-tab" data-target="frites"><i class="fa-solid fa-utensils"></i> Frites</a>
+          <a href="#tacos-signatures" class="menu-tab is-active" data-target="tacos-signatures"><i class="fa-solid fa-pepper-hot"></i> Tacos Signatures</a>
+          <a href="#tacos-composer" class="menu-tab" data-target="tacos-composer"><i class="fa-solid fa-sliders"></i> Tacos à Composer</a>
+          <a href="#burgers" class="menu-tab" data-target="burgers"><i class="fa-solid fa-burger"></i> Burgers</a>
+          <a href="#bowls" class="menu-tab" data-target="bowls"><i class="fa-solid fa-bowl-food"></i> Bowls</a>
+          <a href="#frites" class="menu-tab" data-target="frites"><i class="fa-solid fa-french-fries"></i> Frites</a>
           <a href="#desserts" class="menu-tab" data-target="desserts"><i class="fa-solid fa-ice-cream"></i> Desserts</a>
           <a href="#boissons" class="menu-tab" data-target="boissons"><i class="fa-solid fa-mug-hot"></i> Boissons</a>
-
-          <label class="menu-search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input id="menuSearch" type="search" placeholder="Rechercher un plat…" autocomplete="off" />
-          </label>
+          <label class="menu-search"><i class="fa-solid fa-magnifying-glass"></i><input id="menuSearch" type="search" placeholder="Rechercher un plat…" autocomplete="off" /></label>
         </div>
       </div>
 
-      <!-- Categories grid -->
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="catGrid">
-        <a href="#commander" id="tacos" class="cat-card reveal" data-name="tacos french signature merveille spicy" style="--img:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80'); --i:0">
-          <div class="cat-icon"><i class="fa-solid fa-pepper-hot"></i></div>
-          <h3 class="cat-title">Tacos</h3>
-          <p class="cat-desc">Le french tacos signature, fondant et généreux. 1, 2 ou 3 viandes.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="#commander" id="burgers" class="cat-card reveal" data-name="burger cheese double royal bacon" style="--img:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80'); --i:1">
-          <div class="cat-icon"><i class="fa-solid fa-burger"></i></div>
-          <h3 class="cat-title">Burgers</h3>
-          <p class="cat-desc">Pains briochés, viande hachée du jour, fromages affinés.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="#commander" id="bowls" class="cat-card reveal" data-name="bowl poke poulet saumon veggie" style="--img:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80'); --i:2">
-          <div class="cat-icon"><i class="fa-solid fa-bowl-food"></i></div>
-          <h3 class="cat-title">Bowls</h3>
-          <p class="cat-desc">Frais, équilibrés, gourmands. Poulet crispy, saumon, veggie.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="#commander" id="frites" class="cat-card reveal" data-name="frites barquette cheddar bacon nuggets kebab" style="--img:url('https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=80'); --i:3">
-          <div class="cat-icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3 class="cat-title">Frites & Barquettes</h3>
-          <p class="cat-desc">Cheddar bacon, sauce maison, poulet crispy, nuggets premium.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="#commander" id="desserts" class="cat-card reveal" data-name="dessert cookie brownie gaufre nutella tiramisu" style="--img:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80'); --i:4">
-          <div class="cat-icon"><i class="fa-solid fa-ice-cream"></i></div>
-          <h3 class="cat-title">Desserts</h3>
-          <p class="cat-desc">Cookies coulants, brownies, gaufres, fondants chocolat.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-        <a href="#commander" id="boissons" class="cat-card reveal" data-name="boisson soda milkshake jus eau coca fanta" style="--img:url('https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=80'); --i:5">
-          <div class="cat-icon"><i class="fa-solid fa-mug-hot"></i></div>
-          <h3 class="cat-title">Boissons</h3>
-          <p class="cat-desc">Sodas frais, milkshakes onctueux, eaux et jus pressés.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============== SIGNATURE PRODUCTS ============== -->
-  <section id="commander" class="relative z-10 py-20 md:py-24">
-    <div class="ribbon">
-      <div class="ribbon-track">
-        <span>★ NOUVEAUTÉ</span><span>★ BEST-SELLERS</span><span>★ FAIT MAISON</span><span>★ PRODUITS FRAIS</span>
-        <span>★ NOUVEAUTÉ</span><span>★ BEST-SELLERS</span><span>★ FAIT MAISON</span><span>★ PRODUITS FRAIS</span>
-      </div>
-    </div>
-
-    <div class="mx-auto max-w-7xl px-4 mt-16">
-      <div class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-4 reveal">
-        <div>
-          <p class="font-script text-brand-red text-2xl">Les incontournables</p>
-          <h2 class="section-title">Produits signature</h2>
+      <!-- ===== TACOS SIGNATURES ===== -->
+      <div id="tacos-signatures" class="menu-section">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Tacos Signatures</h3>
+          <p class="section-lead">Nos recettes exclusives, fondantes et généreuses. Galette croustillante, sauce fromagère maison.</p>
         </div>
-        <p class="section-lead md:text-right">
-          La sélection des recettes les plus commandées par nos clients.
-          Reconnaissables, généreuses et signées L'Etoile.
-        </p>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8" id="prodGrid">
+          <article class="prod-card reveal" data-name="o'merveille tacos poulet cheddar signature">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="O'Merveille"/><span class="badge"><i class="fa-solid fa-fire"></i> BEST</span></div>
+            <div class="prod-body"><h4 class="prod-title">O'Merveille</h4><p class="prod-desc">Poulet, cheddar fondu, sauce signature, oignons crispy</p><div class="prod-foot"><span class="prod-price">10,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'thentik tacos viande hachée">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=600&q=80" alt="O'Thentik"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Thentik</h4><p class="prod-desc">Viande hachée, fromage, sauce fromagère, salade</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'chèvre miel tacos chèvre">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?auto=format&fit=crop&w=600&q=80" alt="O'Chèvre Miel"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Chèvre Miel</h4><p class="prod-desc">Poulet, chèvre fondant, miel, roquette</p><div class="prod-foot"><span class="prod-price">10,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'spicy tacos piquant jalapeños boeuf">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80" alt="O'Spicy"/><span class="badge"><i class="fa-solid fa-pepper-hot"></i> SPICY</span></div>
+            <div class="prod-body"><h4 class="prod-title">O'Spicy</h4><p class="prod-desc">Bœuf, jalapeños, cheddar fondu, sauce piquante</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'xford tacos poulet">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1562059390-a761a084768e?auto=format&fit=crop&w=600&q=80" alt="O'Xford"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Xford</h4><p class="prod-desc">Poulet pané, emmental, sauce blanche, salade</p><div class="prod-foot"><span class="prod-price">10,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'rientale tacos oriental kebab">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=600&q=80" alt="O'Rientale"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Rientale</h4><p class="prod-desc">Kebab, oignons, poivrons, sauce orientale</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'chef tacos chef premium">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1613514785940-daed07799d9b?auto=format&fit=crop&w=600&q=80" alt="O'Chef"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Chef</h4><p class="prod-desc">Recette du chef, sauce secrète, double garniture</p><div class="prod-foot"><span class="prod-price">10,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="montagnard tacos raclette montagne">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=600&q=80" alt="Montagnard"/></div>
+            <div class="prod-body"><h4 class="prod-title">Montagnard</h4><p class="prod-desc">Poulet, raclette fondante, pommes de terre, lardons</p><div class="prod-foot"><span class="prod-price">10,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'vergnat tacos auvergne fromage">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=format&fit=crop&w=600&q=80" alt="O'Vergnat"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Vergnat</h4><p class="prod-desc">Spécialité auvergnate, saint-nectaire, viande</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="o'riginal tacos original">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=600&q=80" alt="O'Riginal"/></div>
+            <div class="prod-body"><h4 class="prod-title">O'Riginal</h4><p class="prod-desc">Recette originale, sauce maison, triple fromage</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="doritos tacos croustillant chips">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=600&q=80" alt="Doritos"/><span class="badge"><i class="fa-solid fa-star"></i> NEW</span></div>
+            <div class="prod-body"><h4 class="prod-title">Doritos</h4><p class="prod-desc">Poulet crispy, Doritos, cheddar, sauce BBQ</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="végétarien tacos veggie falafel">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Végétarien"/><span class="badge bg-green-600"><i class="fa-solid fa-seedling"></i> VEGGIE</span></div>
+            <div class="prod-body"><h4 class="prod-title">Végétarien</h4><p class="prod-desc">Falafel, légumes grillés, sauce blanche, fromage</p><div class="prod-foot"><span class="prod-price">8,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+        </div>
       </div>
 
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" id="prodGrid">
-        <article class="prod-card reveal" data-name="tacos merveille poulet cheddar signature" style="--i:0">
-          <div class="prod-img">
-            <img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80" alt="O'Merveille Taco"/>
-            <span class="badge"><i class="fa-solid fa-fire"></i> TOP</span>
+      <!-- ===== TACOS À COMPOSER ===== -->
+      <div id="tacos-composer" class="menu-section mt-20">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Tacos à Composer</h3>
+          <p class="section-lead">Choisissez votre taille, vos viandes et vos sauces. Sauce fromagère maison incluse.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+          <article class="prod-card reveal" data-name="tacos simple M composer">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Tacos M"/></div>
+            <div class="prod-body"><h4 class="prod-title">Simple (M)</h4><p class="prod-desc">1 viande au choix, sauce fromagère, 1 sauce</p><div class="prod-foot"><span class="prod-price">7,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="tacos maxi L composer double">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=600&q=80" alt="Tacos L"/></div>
+            <div class="prod-body"><h4 class="prod-title">Maxi (L)</h4><p class="prod-desc">2 viandes au choix, sauce fromagère, 2 sauces</p><div class="prod-foot"><span class="prod-price">9,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="tacos mega XL composer triple">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=600&q=80" alt="Tacos XL"/><span class="badge"><i class="fa-solid fa-crown"></i> XL</span></div>
+            <div class="prod-body"><h4 class="prod-title">Mega (XL)</h4><p class="prod-desc">3 viandes au choix, sauce fromagère, 2 sauces</p><div class="prod-foot"><span class="prod-price">11,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+        </div>
+        <div class="mt-8 p-5 rounded-2xl bg-white/[.03] border border-white/10 reveal">
+          <p class="text-sm font-semibold mb-3"><i class="fa-solid fa-drumstick-bite text-brand-red mr-2"></i>Viandes disponibles :</p>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Tenders</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Kebab</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Steak haché</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Nuggets</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Poulet</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Merguez</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Cordon bleu</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Falafel</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/10">Kefta</span>
           </div>
-          <div class="prod-body">
-            <h3 class="prod-title">O'Merveille Taco</h3>
-            <p class="prod-desc">Poulet, cheddar, sauce signature, oignons crispy.</p>
-            <div class="prod-foot">
-              <span class="prod-price">9,90 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="prod-card reveal" data-name="tacos spicy boeuf jalapenos" style="--i:1">
-          <div class="prod-img">
-            <img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=900&q=80" alt="O'Spicy Taco"/>
-            <span class="badge"><i class="fa-solid fa-pepper-hot"></i> SPICY</span>
-          </div>
-          <div class="prod-body">
-            <h3 class="prod-title">O'Spicy Taco</h3>
-            <p class="prod-desc">Boeuf haché, jalapeños, cheddar fondu, sauce piquante.</p>
-            <div class="prod-foot">
-              <span class="prod-price">10,50 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="prod-card reveal" data-name="burger double cheese steak cheddar" style="--i:2">
-          <div class="prod-img">
-            <img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=80" alt="Double Cheese Burger"/>
-            <span class="badge"><i class="fa-solid fa-star"></i> SIGNATURE</span>
-          </div>
-          <div class="prod-body">
-            <h3 class="prod-title">Double Cheese</h3>
-            <p class="prod-desc">Double steak, double cheddar, oignons confits, bun brioché.</p>
-            <div class="prod-foot">
-              <span class="prod-price">11,90 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
-            </div>
-          </div>
-        </article>
-
-        <article class="prod-card reveal" data-name="frites cheddar bacon barquette" style="--i:3">
-          <div class="prod-img">
-            <img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=80" alt="Frites Cheddar Bacon"/>
-            <span class="badge"><i class="fa-solid fa-bacon"></i> NEW</span>
-          </div>
-          <div class="prod-body">
-            <h3 class="prod-title">Frites Cheddar Bacon</h3>
-            <p class="prod-desc">Frites maison, cheddar coulant, éclats de bacon croustillant.</p>
-            <div class="prod-foot">
-              <span class="prod-price">7,50 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
-            </div>
-          </div>
-        </article>
+        </div>
       </div>
 
-      <p id="emptyMsg" class="hidden text-center text-brand-gray mt-8">Aucun plat ne correspond à votre recherche.</p>
+
+      <!-- ===== BURGERS ===== -->
+      <div id="burgers" class="menu-section mt-20">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Burgers</h3>
+          <p class="section-lead">Pains briochés, viande hachée fraîche, fromages fondants. Servis avec frites maison.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+          <article class="prod-card reveal" data-name="cheese burger simple fromage">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Cheese Burger"/></div>
+            <div class="prod-body"><h4 class="prod-title">Cheese Burger</h4><p class="prod-desc">Steak haché, cheddar, salade, tomate, oignons</p><div class="prod-foot"><span class="prod-price">7,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="double cheese burger">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=600&q=80" alt="Double Cheese"/><span class="badge"><i class="fa-solid fa-fire"></i> TOP</span></div>
+            <div class="prod-body"><h4 class="prod-title">Double Cheese</h4><p class="prod-desc">Double steak, double cheddar, oignons confits</p><div class="prod-foot"><span class="prod-price">8,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="triple cheese burger">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=600&q=80" alt="Triple Cheese"/></div>
+            <div class="prod-body"><h4 class="prod-title">Triple Cheese</h4><p class="prod-desc">Triple steak, triple cheddar, sauce burger</p><div class="prod-foot"><span class="prod-price">9,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="royal bacon burger">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?auto=format&fit=crop&w=600&q=80" alt="Royal Bacon"/></div>
+            <div class="prod-body"><h4 class="prod-title">Royal Bacon</h4><p class="prod-desc">Steak, bacon crispy, cheddar, sauce BBQ</p><div class="prod-foot"><span class="prod-price">9,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="double cheese bacon burger">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80" alt="Double Cheese Bacon"/></div>
+            <div class="prod-body"><h4 class="prod-title">Double Cheese Bacon</h4><p class="prod-desc">Double steak, bacon, double cheddar, oignons</p><div class="prod-foot"><span class="prod-price">11,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="chicken burger poulet">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=600&q=80" alt="Chicken Burger"/></div>
+            <div class="prod-body"><h4 class="prod-title">Chicken Burger</h4><p class="prod-desc">Poulet pané croustillant, salade, sauce</p><div class="prod-foot"><span class="prod-price">7,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="king burger premium">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" alt="King Burger"/></div>
+            <div class="prod-body"><h4 class="prod-title">King Burger</h4><p class="prod-desc">Double steak, oeuf, cheddar, sauce maison</p><div class="prod-foot"><span class="prod-price">8,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="PSG burger special">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?auto=format&fit=crop&w=600&q=80" alt="PSG Burger"/><span class="badge"><i class="fa-solid fa-star"></i> SPECIAL</span></div>
+            <div class="prod-body"><h4 class="prod-title">PSG Burger</h4><p class="prod-desc">Double steak, raclette, oignons caramélisés</p><div class="prod-foot"><span class="prod-price">10,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="mac burger big sauce">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1596956470007-2bf6095e7e16?auto=format&fit=crop&w=600&q=80" alt="Mac Burger"/></div>
+            <div class="prod-body"><h4 class="prod-title">Mac Burger</h4><p class="prod-desc">Double steak, salade, cornichons, sauce spéciale</p><div class="prod-foot"><span class="prod-price">9,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="chèvre miel burger">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1625813506062-0aeb1571571a?auto=format&fit=crop&w=600&q=80" alt="Chèvre Miel Burger"/></div>
+            <div class="prod-body"><h4 class="prod-title">Chèvre Miel Burger</h4><p class="prod-desc">Steak, chèvre fondant, miel, roquette</p><div class="prod-foot"><span class="prod-price">8,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="veggie burger végétarien">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1520072959219-c595e6cdc07a?auto=format&fit=crop&w=600&q=80" alt="Veggie Burger"/><span class="badge bg-green-600"><i class="fa-solid fa-seedling"></i> VEGGIE</span></div>
+            <div class="prod-body"><h4 class="prod-title">Veggie Burger</h4><p class="prod-desc">Galette végétale, crudités, sauce yaourt</p><div class="prod-foot"><span class="prod-price">7,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== BOWLS ===== -->
+      <div id="bowls" class="menu-section mt-20">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Bowls</h3>
+          <p class="section-lead">Frais, équilibrés et gourmands. Riz, crudités, protéines et sauces maison.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+          <article class="prod-card reveal" data-name="big bowl poulet xl">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="Big Bowl"/><span class="badge"><i class="fa-solid fa-crown"></i> XL</span></div>
+            <div class="prod-body"><h4 class="prod-title">Big Bowl</h4><p class="prod-desc">Portion XL, double protéine, avocat, sauce</p><div class="prod-foot"><span class="prod-price">16,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="crousti bowl poulet crispy">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" alt="Crousti Bowl"/><span class="badge"><i class="fa-solid fa-fire"></i> BEST</span></div>
+            <div class="prod-body"><h4 class="prod-title">Crousti Bowl</h4><p class="prod-desc">Poulet crispy, riz, avocat, edamame, sauce</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="mythique bowl signature">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=600&q=80" alt="Mythique Bowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Mythique Bowl</h4><p class="prod-desc">Recette mythique, sauce signature, riz sauté</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="super bowl double viande">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=600&q=80" alt="Super Bowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Super Bowl</h4><p class="prod-desc">Double protéine, légumes grillés, sauce teriyaki</p><div class="prod-foot"><span class="prod-price">16,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="veggie bowl végétarien falafel">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1543362906-acfc16c67564?auto=format&fit=crop&w=600&q=80" alt="Veggie Bowl"/><span class="badge bg-green-600"><i class="fa-solid fa-seedling"></i> VEGGIE</span></div>
+            <div class="prod-body"><h4 class="prod-title">Veggie Bowl</h4><p class="prod-desc">Falafel, houmous, légumes frais, sauce tahini</p><div class="prod-foot"><span class="prod-price">13,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="kebabowl kebab bowl">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1604909052743-94e838986d24?auto=format&fit=crop&w=600&q=80" alt="Kebabowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Kebabowl</h4><p class="prod-desc">Kebab émincé, riz, crudités, sauce blanche</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="crispy bowl tenders">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Crispy Bowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Crispy Bowl</h4><p class="prod-desc">Tenders croustillants, riz, sauce sweet chili</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="typik bowl classique">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80" alt="Typik Bowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Typik Bowl</h4><p class="prod-desc">Poulet grillé, riz, crudités, sauce maison</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="cheese bowl cheddar fromage">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80" alt="Cheese Bowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Cheese Bowl</h4><p class="prod-desc">Poulet, cheddar fondu, riz, oignons crispy</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="indy bowl indien curry">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" alt="Indy Bowl"/></div>
+            <div class="prod-body"><h4 class="prod-title">Indy Bowl</h4><p class="prod-desc">Poulet curry, riz basmati, légumes, sauce indienne</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="spicy bowl piquant">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1484723091996-f622409b743e?auto=format&fit=crop&w=600&q=80" alt="Spicy Bowl"/><span class="badge"><i class="fa-solid fa-pepper-hot"></i> SPICY</span></div>
+            <div class="prod-body"><h4 class="prod-title">Spicy Bowl</h4><p class="prod-desc">Poulet épicé, riz, jalapeños, sauce sriracha</p><div class="prod-foot"><span class="prod-price">14,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+        </div>
+      </div>
+
+
+      <!-- ===== FRITES & BARQUETTES ===== -->
+      <div id="frites" class="menu-section mt-20">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Frites & Barquettes</h3>
+          <p class="section-lead">Frites maison croustillantes, barquettes généreuses et accompagnements gourmands.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+          <article class="prod-card reveal" data-name="moyenne frites classique">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80" alt="Moyenne Frites"/></div>
+            <div class="prod-body"><h4 class="prod-title">Moyenne Frites</h4><p class="prod-desc">Frites maison dorées et croustillantes</p><div class="prod-foot"><span class="prod-price">3,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="grande frites portion">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=600&q=80" alt="Grande Frites"/></div>
+            <div class="prod-body"><h4 class="prod-title">Grande Frites</h4><p class="prod-desc">Grande portion, frites maison croustillantes</p><div class="prod-foot"><span class="prod-price">4,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="frites fromagère fromage gruyère">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=600&q=80" alt="Frites Fromagère"/></div>
+            <div class="prod-body"><h4 class="prod-title">Frites Fromagère</h4><p class="prod-desc">Frites nappées de sauce fromagère maison</p><div class="prod-foot"><span class="prod-price">4,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="frites cheddar sauce">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80" alt="Frites Cheddar"/></div>
+            <div class="prod-body"><h4 class="prod-title">Frites Cheddar</h4><p class="prod-desc">Frites nappées de cheddar fondu onctueux</p><div class="prod-foot"><span class="prod-price">4,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="frites cheddar bacon loaded">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1604503468506-a8da13d82a9b?auto=format&fit=crop&w=600&q=80" alt="Frites Cheddar Bacon"/><span class="badge"><i class="fa-solid fa-fire"></i> BEST</span></div>
+            <div class="prod-body"><h4 class="prod-title">Frites Cheddar Bacon</h4><p class="prod-desc">Frites, cheddar coulant, éclats de bacon crispy</p><div class="prod-foot"><span class="prod-price">5,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="frites fromagère lardon">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1529589510304-b7e994a92f60?auto=format&fit=crop&w=600&q=80" alt="Frites Fromagère Lardon"/></div>
+            <div class="prod-body"><h4 class="prod-title">Frites Fromagère Lardon</h4><p class="prod-desc">Sauce fromagère, lardons grillés, oignons</p><div class="prod-foot"><span class="prod-price">5,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="barquette kebab frites viande">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?auto=format&fit=crop&w=600&q=80" alt="Barquette Kebab"/></div>
+            <div class="prod-body"><h4 class="prod-title">Barquette Kebab</h4><p class="prod-desc">Frites, kebab émincé, sauce blanche, crudités</p><div class="prod-foot"><span class="prod-price">12,00 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="nuggets cheddar crispy onions">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80" alt="Nuggets Cheddar"/><span class="badge"><i class="fa-solid fa-star"></i> NEW</span></div>
+            <div class="prod-body"><h4 class="prod-title">Nuggets Cheddar & Crispy Onions</h4><p class="prod-desc">Nuggets poulet, cheddar fondu, oignons crispy</p><div class="prod-foot"><span class="prod-price">9,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== DESSERTS ===== -->
+      <div id="desserts" class="menu-section mt-20">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Desserts</h3>
+          <p class="section-lead">La touche sucrée pour finir en beauté. Faits maison avec amour.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-8">
+          <article class="prod-card reveal" data-name="cheesecake cookies dessert">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Cheesecake Cookies"/></div>
+            <div class="prod-body"><h4 class="prod-title">Cheesecake Cookies</h4><p class="prod-desc">Base cookies, cream cheese onctueux</p><div class="prod-foot"><span class="prod-price">4,50 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="cheesecake citron dessert">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Cheesecake Citron"/></div>
+            <div class="prod-body"><h4 class="prod-title">Cheesecake Citron</h4><p class="prod-desc">Citron frais, biscuit sablé, crème légère</p><div class="prod-foot"><span class="prod-price">4,50 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="tarte daim chocolat caramel">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80" alt="Tarte Daim"/></div>
+            <div class="prod-body"><h4 class="prod-title">Tarte Daim</h4><p class="prod-desc">Chocolat, caramel croquant, éclats de Daim</p><div class="prod-foot"><span class="prod-price">4,50 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="tiramisu caramel spéculoos">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80" alt="Tiramisu Caramel Spéculoos"/><span class="badge"><i class="fa-solid fa-fire"></i> BEST</span></div>
+            <div class="prod-body"><h4 class="prod-title">Tiramisu Caramel Spéculoos</h4><p class="prod-desc">Mascarpone, caramel beurre salé, spéculoos</p><div class="prod-foot"><span class="prod-price">4,50 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="tiramisu chocolat noisette">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=600&q=80" alt="Tiramisu Chocolat Noisette"/></div>
+            <div class="prod-body"><h4 class="prod-title">Tiramisu Chocolat Noisette</h4><p class="prod-desc">Mascarpone, chocolat noir, éclats de noisette</p><div class="prod-foot"><span class="prod-price">4,50 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="panini nutella chocolat chaud">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Panini Nutella"/></div>
+            <div class="prod-body"><h4 class="prod-title">Panini Nutella</h4><p class="prod-desc">Panini grillé, Nutella fondant, banane</p><div class="prod-foot"><span class="prod-price">5,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="sweety burger dessert sucré">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" alt="Sweety Burger"/></div>
+            <div class="prod-body"><h4 class="prod-title">Sweety Burger</h4><p class="prod-desc">Bun sucré, chocolat, fruits frais, chantilly</p><div class="prod-foot"><span class="prod-price">3,90 €</span><a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-sm"><i class="fa-solid fa-bag-shopping"></i></a></div></div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ===== BOISSONS ===== -->
+      <div id="boissons" class="menu-section mt-20">
+        <div class="menu-section-header reveal">
+          <h3 class="section-title text-3xl">Boissons</h3>
+          <p class="section-lead">Sodas frais, eaux, energy drinks pour accompagner votre repas.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 mt-8">
+          <article class="prod-card reveal" data-name="coca cola soda">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80" alt="Coca-Cola"/></div>
+            <div class="prod-body"><h4 class="prod-title">Coca-Cola</h4><p class="prod-desc">33cl</p><div class="prod-foot"><span class="prod-price">2,50 €</span></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="fanta orange soda">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1624517452488-04869289c4ca?auto=format&fit=crop&w=600&q=80" alt="Fanta"/></div>
+            <div class="prod-body"><h4 class="prod-title">Fanta</h4><p class="prod-desc">33cl</p><div class="prod-foot"><span class="prod-price">2,50 €</span></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="sprite citron soda">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=600&q=80" alt="Sprite"/></div>
+            <div class="prod-body"><h4 class="prod-title">Sprite</h4><p class="prod-desc">33cl</p><div class="prod-foot"><span class="prod-price">2,50 €</span></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="oasis tropical jus">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?auto=format&fit=crop&w=600&q=80" alt="Oasis"/></div>
+            <div class="prod-body"><h4 class="prod-title">Oasis</h4><p class="prod-desc">33cl</p><div class="prod-foot"><span class="prod-price">2,50 €</span></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="monster energy drink">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1622543925917-763c34d1a86e?auto=format&fit=crop&w=600&q=80" alt="Monster"/></div>
+            <div class="prod-body"><h4 class="prod-title">Monster</h4><p class="prod-desc">50cl · Energy</p><div class="prod-foot"><span class="prod-price">3,50 €</span></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="eau water bouteille">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=80" alt="Eau"/></div>
+            <div class="prod-body"><h4 class="prod-title">Eau</h4><p class="prod-desc">50cl</p><div class="prod-foot"><span class="prod-price">1,50 €</span></div></div>
+          </article>
+          <article class="prod-card reveal" data-name="hawai tropical">
+            <div class="prod-img"><img loading="lazy" class="dish-img" src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80" alt="Hawai"/></div>
+            <div class="prod-body"><h4 class="prod-title">Hawai</h4><p class="prod-desc">33cl</p><div class="prod-foot"><span class="prod-price">2,50 €</span></div></div>
+          </article>
+        </div>
+      </div>
+
+      <p id="emptyMsg" class="hidden text-center text-brand-gray mt-8 py-8">Aucun plat ne correspond à votre recherche.</p>
     </div>
   </section>
+
 
   <!-- ============== ABOUT ============== -->
   <section id="about" class="relative z-10 py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-4 grid gap-12 lg:grid-cols-2 lg:items-center">
-      <!-- Mosaic -->
       <div class="grid grid-cols-6 grid-rows-6 gap-3 h-[460px] md:h-[520px] reveal">
-        <div class="col-span-4 row-span-4 about-tile">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Cuisine ouverte" />
-        </div>
-        <div class="col-span-2 row-span-3 about-tile">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Ambiance" />
-        </div>
-        <div class="col-span-2 row-span-3 about-tile">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Clients heureux" />
-        </div>
-        <div class="col-span-3 row-span-2 about-tile">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1559054663-e8d23213f55c?auto=format&fit=crop&w=600&q=80" alt="Plat préparé" />
-        </div>
-        <div class="col-span-3 row-span-2 about-tile relative">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Chef" />
-          <span class="absolute right-3 bottom-3 glass px-3 py-2 rounded-xl text-xs uppercase tracking-widest"><i class="fa-solid fa-star text-brand-red"></i> Depuis 2018</span>
-        </div>
+        <div class="col-span-4 row-span-4 about-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Cuisine L'Etoile" /></div>
+        <div class="col-span-2 row-span-3 about-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Salle" /></div>
+        <div class="col-span-2 row-span-3 about-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Ambiance" /></div>
+        <div class="col-span-3 row-span-2 about-tile"><img loading="lazy" src="https://images.unsplash.com/photo-1559054663-e8d23213f55c?auto=format&fit=crop&w=600&q=80" alt="Préparation" /></div>
+        <div class="col-span-3 row-span-2 about-tile relative"><img loading="lazy" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Plat" /><span class="absolute right-3 bottom-3 glass px-3 py-2 rounded-xl text-xs uppercase tracking-widest"><i class="fa-solid fa-star text-brand-red"></i> Depuis 2018</span></div>
       </div>
-
-      <!-- Text -->
       <div class="reveal">
         <p class="font-script text-brand-red text-2xl">À propos</p>
         <h2 class="section-title">Une expérience street food <span class="text-brand-red">premium</span></h2>
         <p class="section-lead mt-5">
-          L'Etoile Clermont, c'est une nouvelle vision du fast-food : des produits frais, des
-          recettes maison, un service rapide et une atmosphère urbaine moderne.
-          Tacos signatures, burgers généreux, bowls équilibrés — tout est pensé pour le plaisir
-          et la qualité.
+          L'Etoile, c'est bien plus qu'un fast-food. C'est une adresse où la qualité des produits, la générosité des portions et l'authenticité des saveurs font toute la différence. Situé au cœur de Clermont-Ferrand, rue Ballainvilliers, nous proposons une carte complète de tacos signatures, burgers généreux, bowls frais et desserts faits maison. Tous nos produits sont certifiés halal et préparés minute avec des ingrédients frais.
         </p>
-
         <ul class="mt-8 space-y-4">
-          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Ingrédients sourcés et préparés chaque jour</li>
+          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Certifié halal — viandes et produits conformes</li>
+          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Ingrédients frais préparés chaque jour</li>
           <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Recettes signatures uniques à L'Etoile</li>
-          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Service rapide en boutique et en livraison</li>
-          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Une équipe passionnée et accueillante</li>
+          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Livraison rapide via Uber Eats</li>
+          <li class="about-row"><span class="dot"><i class="fa-solid fa-check"></i></span> Ouvert 7j/7 de 10h à 00h30</li>
         </ul>
-
         <div class="mt-10 grid grid-cols-3 gap-6 max-w-md">
-          <div><div class="font-display text-3xl text-brand-red">+50K</div><div class="text-xs text-brand-gray uppercase tracking-widest">Commandes</div></div>
-          <div><div class="font-display text-3xl text-brand-red">4,8★</div><div class="text-xs text-brand-gray uppercase tracking-widest">Note moyenne</div></div>
+          <div><div class="font-display text-3xl text-brand-red">2000+</div><div class="text-xs text-brand-gray uppercase tracking-widest">Avis Uber Eats</div></div>
+          <div><div class="font-display text-3xl text-brand-red">4,3★</div><div class="text-xs text-brand-gray uppercase tracking-widest">Note moyenne</div></div>
           <div><div class="font-display text-3xl text-brand-red">7j/7</div><div class="text-xs text-brand-gray uppercase tracking-widest">Ouvert</div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== REVIEWS ============== -->
-  <section class="relative z-10 py-20 md:py-24">
-    <div class="mx-auto max-w-7xl px-4">
-      <div class="mb-12 text-center reveal">
-        <p class="font-script text-brand-red text-2xl">Ils en parlent</p>
-        <h2 class="section-title">Avis clients</h2>
-        <div class="title-underline"></div>
-      </div>
-
-      <div id="reviews" class="reviews">
-        <div class="reviews-track">
-          <article class="review-card">
-            <div class="flex items-center gap-3">
-              <img loading="lazy" src="https://i.pravatar.cc/100?img=12" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
-              <div>
-                <p class="font-semibold">Yanis M.</p>
-                <p class="text-xs text-brand-gray">Clermont-Ferrand</p>
-              </div>
-              <div class="ml-auto text-brand-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            </div>
-            <p class="mt-4 text-brand-gray">"Le meilleur tacos de Clermont, sans hésiter. Sauce maison incroyable, livraison ultra rapide. Je recommande à 100%."</p>
-          </article>
-          <article class="review-card">
-            <div class="flex items-center gap-3">
-              <img loading="lazy" src="https://i.pravatar.cc/100?img=44" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
-              <div>
-                <p class="font-semibold">Sarah L.</p>
-                <p class="text-xs text-brand-gray">Clermont-Ferrand</p>
-              </div>
-              <div class="ml-auto text-brand-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            </div>
-            <p class="mt-4 text-brand-gray">"Burger Double Cheese juste parfait, le pain est moelleux, la viande savoureuse. Une vraie pépite, et l'équipe est adorable."</p>
-          </article>
-          <article class="review-card">
-            <div class="flex items-center gap-3">
-              <img loading="lazy" src="https://i.pravatar.cc/100?img=33" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
-              <div>
-                <p class="font-semibold">Karim B.</p>
-                <p class="text-xs text-brand-gray">Aubière</p>
-              </div>
-              <div class="ml-auto text-brand-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-            </div>
-            <p class="mt-4 text-brand-gray">"Frites cheddar bacon en mode tuerie. Le rapport qualité/prix est top, et les portions sont généreuses."</p>
-          </article>
-          <article class="review-card">
-            <div class="flex items-center gap-3">
-              <img loading="lazy" src="https://i.pravatar.cc/100?img=5" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
-              <div>
-                <p class="font-semibold">Léa P.</p>
-                <p class="text-xs text-brand-gray">Chamalières</p>
-              </div>
-              <div class="ml-auto text-brand-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            </div>
-            <p class="mt-4 text-brand-gray">"Bowl poulet crispy parfait pour la pause dej'. Frais, équilibré, ultra bon. Et les desserts maison sont à tomber."</p>
-          </article>
-          <article class="review-card">
-            <div class="flex items-center gap-3">
-              <img loading="lazy" src="https://i.pravatar.cc/100?img=68" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
-              <div>
-                <p class="font-semibold">Thomas R.</p>
-                <p class="text-xs text-brand-gray">Clermont-Ferrand</p>
-              </div>
-              <div class="ml-auto text-brand-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            </div>
-            <p class="mt-4 text-brand-gray">"Adresse de référence à Clermont. Les recettes signatures sont vraiment uniques. Le O'Spicy est devenu mon péché mignon."</p>
-          </article>
-          <article class="review-card">
-            <div class="flex items-center gap-3">
-              <img loading="lazy" src="https://i.pravatar.cc/100?img=21" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
-              <div>
-                <p class="font-semibold">Inès D.</p>
-                <p class="text-xs text-brand-gray">Beaumont</p>
-              </div>
-              <div class="ml-auto text-brand-red"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-            </div>
-            <p class="mt-4 text-brand-gray">"L'expérience est ultra premium pour du fast-food. La déco, le packaging, les saveurs : tout est soigné. Bravo."</p>
-          </article>
-        </div>
-
-        <button class="reviews-btn left-2 md:-left-5" data-dir="-1" aria-label="Précédent"><i class="fa-solid fa-arrow-left"></i></button>
-        <button class="reviews-btn right-2 md:-right-5" data-dir="1" aria-label="Suivant"><i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-    </div>
-  </section>
-
   <!-- ============== DELIVERY ============== -->
-  <section class="relative z-10 py-20 md:py-24">
+  <section id="livraison" class="relative z-10 py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-4">
       <div class="delivery-card overflow-hidden">
         <div class="grid lg:grid-cols-2 gap-10 p-8 md:p-14 items-center">
           <div class="reveal">
-            <p class="font-script text-brand-red text-2xl">Livraison</p>
-            <h2 class="section-title">Commandez où vous voulez</h2>
-            <p class="section-lead mt-4">
-              Disponible sur Uber Eats, Deliveroo et en commande à emporter sur place.
-              Livraison rapide à Clermont-Ferrand et alentours.
-            </p>
-
+            <p class="font-script text-brand-red text-2xl">Livraison & Click & Collect</p>
+            <h2 class="section-title">Commandez facilement</h2>
+            <p class="section-lead mt-4">Disponible sur Uber Eats et en retrait sur place (click & collect). Livraison rapide à Clermont-Ferrand et alentours.</p>
             <div class="mt-8 flex flex-wrap gap-3">
-              <a href="#" class="brand-pill"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
-              <a href="#" class="brand-pill"><i class="fa-solid fa-bicycle"></i> Deliveroo</a>
-              <a href="#" class="brand-pill"><i class="fa-solid fa-bag-shopping"></i> Click & Collect</a>
-              <a href="#" class="brand-pill"><i class="fa-solid fa-motorcycle"></i> Just Eat</a>
+              <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="brand-pill"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
+              <a href="tel:+33473905738" class="brand-pill"><i class="fa-solid fa-bag-shopping"></i> Click & Collect</a>
             </div>
-
             <div class="mt-10 grid grid-cols-3 gap-3 max-w-md">
               <div class="delivery-stat"><i class="fa-solid fa-stopwatch text-brand-red"></i><div><div class="font-display text-xl">25 min</div><div class="text-xs text-brand-gray">Livraison</div></div></div>
               <div class="delivery-stat"><i class="fa-solid fa-route text-brand-red"></i><div><div class="font-display text-xl">5 km</div><div class="text-xs text-brand-gray">Rayon</div></div></div>
-              <div class="delivery-stat"><i class="fa-solid fa-shield-halved text-brand-red"></i><div><div class="font-display text-xl">100%</div><div class="text-xs text-brand-gray">Garantie</div></div></div>
+              <div class="delivery-stat"><i class="fa-solid fa-certificate text-brand-red"></i><div><div class="font-display text-xl">Halal</div><div class="text-xs text-brand-gray">Certifié</div></div></div>
             </div>
-
             <div class="mt-10 flex flex-wrap gap-4">
-              <a href="#commander" class="btn-red btn-lg"><i class="fa-solid fa-bolt"></i> COMMANDER MAINTENANT</a>
-              <a href="tel:+33473000000" class="btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> 04 73 00 00 00</a>
+              <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="btn-red btn-lg"><i class="fa-solid fa-bolt"></i> COMMANDER SUR UBER EATS</a>
+              <a href="tel:+33473905738" class="btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> 04 73 90 57 38</a>
             </div>
           </div>
-
-          <!-- Phone mockup -->
           <div class="relative reveal">
             <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(255,30,30,.25),transparent_60%)] blur-2xl"></div>
-
             <div class="phone mx-auto">
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <div class="px-5 pt-10 pb-4 flex items-center justify-between">
-                  <div class="flex items-center gap-2">
-                    <span class="logo-star sm"><i class="fa-solid fa-star"></i></span>
-                    <span class="font-display tracking-widest text-sm">L'ETOILE</span>
-                  </div>
+                  <div class="flex items-center gap-2"><span class="logo-star sm"><i class="fa-solid fa-star"></i></span><span class="font-display tracking-widest text-sm">L'ETOILE</span></div>
                   <i class="fa-solid fa-bag-shopping text-brand-red"></i>
                 </div>
                 <div class="px-5">
                   <p class="font-script text-brand-red text-lg">Bonsoir 👋</p>
-                  <h3 class="font-display text-2xl leading-tight">Que vous fait <br/> envie ce soir ?</h3>
+                  <h3 class="font-display text-2xl leading-tight">Envie d'un<br/>tacos ce soir ?</h3>
                   <div class="mt-4 grid grid-cols-3 gap-2 text-[10px] uppercase tracking-widest">
-                    <span class="chip active">Tacos</span>
-                    <span class="chip">Burgers</span>
-                    <span class="chip">Bowls</span>
+                    <span class="chip active">Tacos</span><span class="chip">Burgers</span><span class="chip">Bowls</span>
                   </div>
-
                   <div class="mt-4 phone-card">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt=""/>
                     <div class="p-3">
-                      <div class="flex items-center justify-between">
-                        <p class="text-sm font-semibold">O'Merveille Taco</p>
-                        <span class="text-brand-red font-display">9,90€</span>
-                      </div>
-                      <p class="text-[11px] text-brand-gray mt-0.5">Sauce signature, cheddar, poulet crispy</p>
-                      <button class="phone-cta mt-3"><i class="fa-solid fa-plus"></i> Ajouter au panier</button>
+                      <div class="flex items-center justify-between"><p class="text-sm font-semibold">O'Merveille</p><span class="text-brand-red font-display">10€</span></div>
+                      <p class="text-[11px] text-brand-gray mt-0.5">Poulet, cheddar, sauce signature</p>
+                      <button class="phone-cta mt-3"><i class="fa-solid fa-plus"></i> Ajouter</button>
                     </div>
                   </div>
-
                   <div class="mt-3 phone-card row">
                     <img loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" alt=""/>
                     <div class="p-3 flex-1">
-                      <div class="flex items-center justify-between">
-                        <p class="text-sm font-semibold">Double Cheese</p>
-                        <span class="text-brand-red font-display">11,90€</span>
-                      </div>
+                      <div class="flex items-center justify-between"><p class="text-sm font-semibold">Double Cheese</p><span class="text-brand-red font-display">8,90€</span></div>
                       <p class="text-[11px] text-brand-gray mt-0.5">Bun brioché, double cheddar</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- Floating tags around phone -->
-            <div class="absolute -top-4 -left-4 glass rounded-2xl px-4 py-3 floaty">
-              <div class="flex items-center gap-3">
-                <i class="fa-solid fa-motorcycle text-brand-red"></i>
-                <div class="text-sm">
-                  <p class="font-semibold">En route</p>
-                  <p class="text-xs text-brand-gray">Arrivée 25 min</p>
-                </div>
-              </div>
-            </div>
-            <div class="absolute -bottom-3 -right-3 glass rounded-2xl px-4 py-3 floaty delay">
-              <div class="flex items-center gap-3">
-                <i class="fa-solid fa-credit-card text-brand-red"></i>
-                <div class="text-sm">
-                  <p class="font-semibold">Paiement sécurisé</p>
-                  <p class="text-xs text-brand-gray">CB · Apple Pay</p>
-                </div>
-              </div>
-            </div>
+            <div class="absolute -top-4 -left-4 glass rounded-2xl px-4 py-3 floaty"><div class="flex items-center gap-3"><i class="fa-solid fa-motorcycle text-brand-red"></i><div class="text-sm"><p class="font-semibold">En route</p><p class="text-xs text-brand-gray">Arrivée ~25 min</p></div></div></div>
+            <div class="absolute -bottom-3 -right-3 glass rounded-2xl px-4 py-3 floaty delay"><div class="flex items-center gap-3"><i class="fa-solid fa-credit-card text-brand-red"></i><div class="text-sm"><p class="font-semibold">Paiement sécurisé</p><p class="text-xs text-brand-gray">CB · Apple Pay</p></div></div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== LOCATION / MAP ============== -->
+  <!-- ============== LOCATION ============== -->
   <section id="location" class="relative z-10 py-20 md:py-24">
     <div class="mx-auto max-w-7xl px-4">
       <div class="mb-12 text-center reveal">
@@ -683,55 +659,20 @@
         <h2 class="section-title">Le restaurant</h2>
         <div class="title-underline"></div>
       </div>
-
       <div class="grid gap-8 lg:grid-cols-5">
         <div class="lg:col-span-3 reveal">
           <div class="map-card">
             <span class="map-pin"><i class="fa-solid fa-location-dot"></i> L'Etoile Clermont</span>
-            <iframe
-              title="Carte L'Etoile Clermont"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=63%20Avenue%20de%20la%20R%C3%A9publique%2C%20Clermont-Ferrand&output=embed">
-            </iframe>
+            <iframe title="Carte L'Etoile Clermont" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=29+rue+Ballainvilliers,+63000+Clermont-Ferrand&output=embed"></iframe>
           </div>
         </div>
-
         <div class="lg:col-span-2 reveal">
           <div class="location-info">
-            <div class="location-row">
-              <div class="ic"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <p class="label">Adresse</p>
-                <p class="value">63 Avenue de la République<br/>63100 Clermont-Ferrand</p>
-                <a class="text-brand-red text-sm mt-2 inline-flex items-center gap-1 hover:underline" href="https://www.google.com/maps/dir/?api=1&destination=63+Avenue+de+la+R%C3%A9publique%2C+Clermont-Ferrand" target="_blank" rel="noopener">
-                  <i class="fa-solid fa-diamond-turn-right"></i> Itinéraire
-                </a>
-              </div>
-            </div>
-            <div class="location-row">
-              <div class="ic"><i class="fa-regular fa-clock"></i></div>
-              <div>
-                <p class="label">Horaires</p>
-                <p class="value">Lun – Dim · 11h00 – 02h00</p>
-                <p class="text-xs text-brand-gray mt-1">Ouvert 7j/7 — Cuisine ouverte jusqu'à 01h30</p>
-              </div>
-            </div>
-            <div class="location-row">
-              <div class="ic"><i class="fa-solid fa-phone"></i></div>
-              <div>
-                <p class="label">Téléphone</p>
-                <a class="value hover:text-brand-red transition" href="tel:+33473000000">04 73 00 00 00</a>
-                <p class="text-xs text-brand-gray mt-1">Réponse rapide · Réservations & take-away</p>
-              </div>
-            </div>
-            <div class="location-row">
-              <div class="ic"><i class="fa-regular fa-envelope"></i></div>
-              <div>
-                <p class="label">Email</p>
-                <a class="value hover:text-brand-red transition" href="mailto:contact@letoile-clermont.fr">contact@letoile-clermont.fr</a>
-              </div>
-            </div>
+            <div class="location-row"><div class="ic"><i class="fa-solid fa-location-dot"></i></div><div><p class="label">Adresse</p><p class="value">29 rue Ballainvilliers<br/>63000 Clermont-Ferrand</p><a class="text-brand-red text-sm mt-2 inline-flex items-center gap-1 hover:underline" href="https://www.google.com/maps/dir/?api=1&destination=29+rue+Ballainvilliers,+Clermont-Ferrand" target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"></i> Itinéraire</a></div></div>
+            <div class="location-row"><div class="ic"><i class="fa-regular fa-clock"></i></div><div><p class="label">Horaires</p><p class="value">Lun – Dim · 10h00 – 00h30</p><p class="text-xs text-brand-gray mt-1">Ouvert 7j/7 — Cuisine non-stop</p></div></div>
+            <div class="location-row"><div class="ic"><i class="fa-solid fa-phone"></i></div><div><p class="label">Téléphone</p><a class="value hover:text-brand-red transition" href="tel:+33473905738">04 73 90 57 38</a><p class="text-xs text-brand-gray mt-1">Commandes & renseignements</p></div></div>
+            <div class="location-row"><div class="ic"><i class="fa-regular fa-envelope"></i></div><div><p class="label">Email</p><a class="value hover:text-brand-red transition" href="mailto:lotfourt@gmail.com">lotfourt@gmail.com</a></div></div>
+            <div class="location-row"><div class="ic"><i class="fa-solid fa-certificate"></i></div><div><p class="label">Certification</p><p class="value">Certifié Halal</p><p class="text-xs text-brand-gray mt-1">Viandes et préparations conformes</p></div></div>
           </div>
         </div>
       </div>
@@ -741,37 +682,22 @@
   <!-- ============== FOOTER ============== -->
   <footer id="contact" class="site-footer">
     <div class="mx-auto max-w-7xl px-4 py-16 grid gap-10 md:grid-cols-12">
-      <!-- Brand -->
       <div class="md:col-span-4">
-        <a href="#home" class="flex items-center gap-3">
-          <span class="logo-star"><i class="fa-solid fa-star"></i></span>
-          <span class="font-display text-xl tracking-widest">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
-        </a>
-        <p class="mt-4 text-sm text-brand-gray max-w-xs leading-relaxed">
-          Premium street food à Clermont-Ferrand. Tacos, burgers, bowls — recettes signatures, produits frais, ambiance soignée.
-        </p>
+        <a href="#home" class="flex items-center gap-3"><span class="logo-star"><i class="fa-solid fa-star"></i></span><span class="font-display text-xl tracking-widest">L'ETOILE <span class="text-brand-red">CLERMONT</span></span></a>
+        <p class="mt-4 text-sm text-brand-gray max-w-xs leading-relaxed">Restaurant halal à Clermont-Ferrand. Tacos signatures, burgers, bowls, frites et desserts. Produits frais, recettes maison, service rapide.</p>
         <div class="mt-5 flex gap-3">
-          <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-btn" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
-          <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/letoile_clermont/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/letoileclermont/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.snapchat.com/add/letoile_clermont" target="_blank" rel="noopener" class="social-btn" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
+          <a href="https://www.tiktok.com/@letoile_clermont" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-
-        <div class="footer-mini-map">
-          <iframe
-            title="Mini carte"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=63%20Avenue%20de%20la%20R%C3%A9publique%2C%20Clermont-Ferrand&output=embed">
-          </iframe>
-        </div>
+        <div class="footer-mini-map"><iframe title="Mini carte" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=29+rue+Ballainvilliers,+63000+Clermont-Ferrand&output=embed"></iframe></div>
       </div>
-
-      <!-- Menu -->
       <div class="md:col-span-2">
         <p class="footer-title">Menu</p>
         <ul class="footer-list">
-          <li><a href="#tacos">Tacos</a></li>
+          <li><a href="#tacos-signatures">Tacos Signatures</a></li>
+          <li><a href="#tacos-composer">Tacos à Composer</a></li>
           <li><a href="#burgers">Burgers</a></li>
           <li><a href="#bowls">Bowls</a></li>
           <li><a href="#frites">Frites & Barquettes</a></li>
@@ -779,47 +705,35 @@
           <li><a href="#boissons">Boissons</a></li>
         </ul>
       </div>
-
-      <!-- Contact -->
       <div class="md:col-span-3">
         <p class="footer-title">Contact</p>
         <ul class="footer-contact">
-          <li><i class="fa-solid fa-location-dot"></i> 63 Avenue de la République,<br/>63100 Clermont-Ferrand</li>
-          <li><i class="fa-solid fa-phone"></i> <a href="tel:+33473000000" class="hover:text-brand-red">04 73 00 00 00</a></li>
-          <li><i class="fa-regular fa-clock"></i> 7j/7 — 11h00 à 02h00</li>
-          <li><i class="fa-regular fa-envelope"></i> <a href="mailto:contact@letoile-clermont.fr" class="hover:text-brand-red">contact@letoile-clermont.fr</a></li>
+          <li><i class="fa-solid fa-location-dot"></i> 29 rue Ballainvilliers,<br/>63000 Clermont-Ferrand</li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+33473905738" class="hover:text-brand-red">04 73 90 57 38</a></li>
+          <li><i class="fa-regular fa-clock"></i> 7j/7 · 10h00 – 00h30</li>
+          <li><i class="fa-regular fa-envelope"></i> <a href="mailto:lotfourt@gmail.com" class="hover:text-brand-red">lotfourt@gmail.com</a></li>
+          <li><i class="fa-solid fa-certificate"></i> Certifié Halal</li>
         </ul>
-
-        <p class="footer-title mt-8">Livraison</p>
+        <p class="footer-title mt-8">Commander</p>
         <div class="delivery-mini">
-          <a href="#"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
-          <a href="#"><i class="fa-solid fa-bicycle"></i> Deliveroo</a>
-          <a href="#"><i class="fa-solid fa-motorcycle"></i> Just Eat</a>
+          <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
+          <a href="tel:+33473905738"><i class="fa-solid fa-bag-shopping"></i> Click & Collect</a>
         </div>
       </div>
-
-      <!-- Newsletter -->
       <div class="md:col-span-3">
         <p class="footer-title">Newsletter</p>
-        <p class="text-sm text-brand-gray leading-relaxed">Recevez nos offres et nouveautés en avant-première — pas de spam, juste du bon.</p>
+        <p class="text-sm text-brand-gray leading-relaxed">Recevez nos offres et nouveautés en avant-première.</p>
         <form class="mt-4 flex gap-2" onsubmit="event.preventDefault(); var b=this.querySelector('button'); b.innerHTML='<i class=&quot;fa-solid fa-check&quot;></i>'; this.querySelector('input').value=''; setTimeout(function(){b.innerHTML='<i class=&quot;fa-solid fa-arrow-right&quot;></i>';}, 2400);">
           <input type="email" required placeholder="Votre email" class="news-input" aria-label="Email"/>
           <button class="btn-red btn-sm" aria-label="S'inscrire"><i class="fa-solid fa-arrow-right"></i></button>
         </form>
-        <div class="mt-6 flex items-center gap-3 text-xs text-brand-gray">
-          <i class="fa-solid fa-shield-halved text-brand-red"></i>
-          <span>Paiement 100% sécurisé · Données protégées</span>
-        </div>
-        <div class="mt-3 flex items-center gap-3 text-xs text-brand-gray">
-          <i class="fa-solid fa-credit-card text-brand-red"></i>
-          <span>CB · Apple Pay · Google Pay · Tickets restaurant</span>
-        </div>
+        <div class="mt-6 flex items-center gap-3 text-xs text-brand-gray"><i class="fa-solid fa-shield-halved text-brand-red"></i><span>Paiement sécurisé · CB · Apple Pay</span></div>
+        <div class="mt-3 flex items-center gap-3 text-xs text-brand-gray"><i class="fa-solid fa-certificate text-brand-red"></i><span>Tickets restaurant acceptés (Swile, Pluxee, Up)</span></div>
       </div>
     </div>
-
     <div class="border-t border-white/5">
       <div class="mx-auto max-w-7xl px-4 py-5 flex flex-col md:flex-row items-center justify-between text-xs text-brand-gray gap-3">
-        <p>© <span id="year"></span> L'Etoile Clermont — Tous droits réservés.</p>
+        <p>© <span id="year"></span> SARL L'Etoile — Tous droits réservés · SIRET 52295979</p>
         <div class="flex gap-5">
           <a href="#" class="hover:text-white">Mentions légales</a>
           <a href="#" class="hover:text-white">Confidentialité</a>
@@ -829,15 +743,10 @@
     </div>
   </footer>
 
-  <!-- Floating CTA (mobile) -->
-  <a href="#commander" class="floating-cta">
-    <i class="fa-solid fa-bag-shopping"></i> Commander
-  </a>
-
   <!-- Sticky mobile bottom bar -->
   <nav class="mobile-bar" aria-label="Actions rapides">
-    <a href="#commander" class="primary"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
-    <a href="tel:+33473000000" class="secondary"><i class="fa-solid fa-phone"></i> Appeler</a>
+    <a href="https://www.ubereats.com/fr-en/store/letoile-montferrand/X09fRGbpSMGWcWOWt7JLLw" target="_blank" rel="noopener" class="primary"><i class="fa-solid fa-bag-shopping"></i> Commander</a>
+    <a href="tel:+33473905738" class="secondary"><i class="fa-solid fa-phone"></i> Appeler</a>
   </nav>
 
   <script src="js/main.js"></script>

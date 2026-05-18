@@ -423,6 +423,10 @@ h1, h2, h3, h4  { letter-spacing: .015em; }
   .menu-search    { display: none; }
 }
 
+/* ----- Menu sections ----- */
+.menu-section { scroll-margin-top: 160px; }
+.menu-section-header { margin-bottom: 0; }
+
 /* ----- Category cards ----- */
 .cat-card {
   position: relative;

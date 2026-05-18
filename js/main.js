@@ -221,19 +221,15 @@
       };
 
       const spy = new IntersectionObserver((entries) => {
-        // pick the most visible entry
-        let best = null;
         entries.forEach(e => {
-          if (!e.isIntersecting) return;
-          if (!best || e.intersectionRatio > best.intersectionRatio) best = e;
+          if (e.isIntersecting) {
+            const tab = sectionMap.get(e.target);
+            if (tab) setActive(tab);
+          }
         });
-        if (best) {
-          const tab = sectionMap.get(best.target);
-          if (tab) setActive(tab);
-        }
       }, {
-        rootMargin: '-160px 0px -55% 0px',
-        threshold: [0.05, 0.25, 0.5, 0.75]
+        rootMargin: '-180px 0px -60% 0px',
+        threshold: [0.01, 0.2]
       });
       sectionMap.forEach((_, section) => spy.observe(section));
     }
@@ -242,23 +238,25 @@
   /* ---------- Menu search / filter ---------- */
   const searchEl = document.getElementById('menuSearch');
   const emptyMsg = document.getElementById('emptyMsg');
-  const filterables = document.querySelectorAll('#catGrid [data-name], #prodGrid [data-name]');
-  if (searchEl && filterables.length) {
+  const allCards = document.querySelectorAll('.menu-section .prod-card[data-name]');
+  if (searchEl && allCards.length) {
     const norm = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const apply = () => {
       const q = norm(searchEl.value.trim());
-      let visibleProd = 0;
-      let visibleCat = 0;
-      filterables.forEach(card => {
+      let visible = 0;
+      allCards.forEach(card => {
         const hay = norm(card.dataset.name) + ' ' + norm(card.textContent);
         const match = !q || hay.includes(q);
         card.style.display = match ? '' : 'none';
-        if (match) {
-          if (card.closest('#prodGrid')) visibleProd++;
-          if (card.closest('#catGrid'))  visibleCat++;
-        }
+        if (match) visible++;
       });
-      if (emptyMsg) emptyMsg.classList.toggle('hidden', !(q && visibleProd === 0));
+      // show/hide section headers if all cards in that section are hidden
+      document.querySelectorAll('.menu-section').forEach(sec => {
+        const cards = sec.querySelectorAll('.prod-card[data-name]');
+        const anyVisible = Array.from(cards).some(c => c.style.display !== 'none');
+        sec.style.display = (q && !anyVisible) ? 'none' : '';
+      });
+      if (emptyMsg) emptyMsg.classList.toggle('hidden', !(q && visible === 0));
     };
     let t;
     searchEl.addEventListener('input', () => { clearTimeout(t); t = setTimeout(apply, 80); });
