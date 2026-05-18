@@ -1,10 +1,11 @@
-/* L'Etoile Clermont — Interactions
+/* L'Etoile Clermont — Premium Interactions (v2)
    - Navbar scroll state
    - Mobile drawer
    - Reveal-on-scroll
-   - Reviews slider (drag + buttons)
+   - Reviews slider (drag + buttons + autoplay)
    - Hero red particles
-   - Year stamp
+   - Hero 3D tilt + multi-layer mouse parallax
+   - Body lock when drawer open
 */
 
 (() => {
@@ -27,9 +28,14 @@
   /* ---------- Mobile drawer ---------- */
   const menuBtn   = document.getElementById('menuBtn');
   const mobileNav = document.getElementById('mobileNav');
-  const openNav  = () => mobileNav?.classList.remove('hidden');
-  const closeNav = () => mobileNav?.classList.add('hidden');
-
+  const openNav  = () => {
+    mobileNav?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeNav = () => {
+    mobileNav?.classList.add('hidden');
+    document.body.style.overflow = '';
+  };
   menuBtn?.addEventListener('click', openNav);
   mobileNav?.querySelectorAll('[data-close]').forEach(el => {
     el.addEventListener('click', closeNav);
@@ -72,7 +78,6 @@
       });
     });
 
-    // drag to scroll
     let isDown = false, startX = 0, startScroll = 0;
     track.addEventListener('mousedown', (e) => {
       isDown = true; startX = e.pageX; startScroll = track.scrollLeft;
@@ -85,7 +90,6 @@
       track.scrollLeft = startScroll - (e.pageX - startX);
     });
 
-    // auto-advance with pause on hover/visibility
     let timer = null;
     const start = () => {
       stop();
@@ -104,15 +108,16 @@
 
   /* ---------- Hero particles ---------- */
   const particlesRoot = document.getElementById('particles');
-  if (particlesRoot && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const COUNT = 22;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (particlesRoot && !reduceMotion) {
+    const COUNT = 28;
     for (let i = 0; i < COUNT; i++) {
       const p = document.createElement('span');
       p.className = 'particle';
       p.style.left = Math.random() * 100 + '%';
-      p.style.bottom = Math.random() * 30 + '%';
-      p.style.animationDuration = (4 + Math.random() * 6) + 's';
-      p.style.animationDelay = (Math.random() * 6) + 's';
+      p.style.bottom = Math.random() * 35 + '%';
+      p.style.animationDuration = (4 + Math.random() * 7) + 's';
+      p.style.animationDelay = (Math.random() * 7) + 's';
       p.style.opacity = (0.3 + Math.random() * 0.6).toFixed(2);
       const size = 2 + Math.random() * 3;
       p.style.width = size + 'px';
@@ -136,18 +141,53 @@
     });
   });
 
-  /* ---------- Subtle parallax for hero food ---------- */
-  const composition = document.querySelector('.float-a');
-  const chips = document.querySelectorAll('.food-chip');
-  if (composition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    window.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5);
-      const y = (e.clientY / window.innerHeight - 0.5);
-      composition.style.setProperty('translate', `${x * 14}px ${y * 10}px`);
-      chips.forEach((c, i) => {
-        const f = (i + 1) * 8;
-        c.style.setProperty('translate', `${-x * f}px ${-y * f}px`);
+  /* ---------- Hero 3D tilt + parallax with depth ---------- */
+  const comp = document.querySelector('.hero-comp');
+  if (comp && !reduceMotion && window.matchMedia('(min-width: 768px)').matches) {
+    const layers = comp.querySelectorAll('[data-depth]');
+    const burger = comp.querySelector('.hero-burger');
+    let raf = 0, tx = 0, ty = 0;
+
+    const onMove = (e) => {
+      const rect = comp.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width  - 0.5;
+      const y = (e.clientY - rect.top)  / rect.height - 0.5;
+      tx = x; ty = y;
+      if (raf) return;
+      raf = requestAnimationFrame(apply);
+    };
+
+    const apply = () => {
+      raf = 0;
+      layers.forEach((el) => {
+        const d = parseFloat(el.dataset.depth) || 0.4;
+        const mx = -tx * 30 * d;
+        const my = -ty * 24 * d;
+        el.style.transform = `translate(${mx}px, ${my}px)`;
       });
-    }, { passive: true });
+      // tilt the whole stage subtly
+      comp.style.transform = `rotateX(${(-ty * 5).toFixed(2)}deg) rotateY(${(tx * 6).toFixed(2)}deg)`;
+      if (burger) {
+        burger.style.transform = `translate(${-tx * 14}px, ${-ty * 10}px)`;
+      }
+    };
+
+    const reset = () => {
+      layers.forEach((el) => el.style.transform = '');
+      comp.style.transform = '';
+      if (burger) burger.style.transform = '';
+    };
+
+    comp.addEventListener('mousemove', onMove);
+    comp.addEventListener('mouseleave', reset);
   }
+
+  /* ---------- Image fallbacks (defensive) ---------- */
+  document.querySelectorAll('img').forEach((img) => {
+    img.addEventListener('error', () => {
+      img.style.background = 'linear-gradient(135deg, #1a0000, #0a0a0a)';
+      img.style.minHeight = '120px';
+    }, { once: true });
+  });
+
 })();

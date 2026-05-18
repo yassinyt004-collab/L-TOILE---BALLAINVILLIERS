@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <title>L'Etoile Clermont — Tacos, Burgers & Bowls premium à Clermont-Ferrand</title>
+  <meta name="theme-color" content="#050505" />
+  <title>L'Etoile Clermont — Premium Street Food à Clermont-Ferrand</title>
   <meta name="description" content="L'Etoile Clermont — Tacos, burgers, bowls et desserts. Produits frais, recettes uniques. Livraison rapide à Clermont-Ferrand. Commandez en ligne 7j/7." />
   <meta property="og:title" content="L'Etoile Clermont — Premium Street Food" />
   <meta property="og:description" content="Tacos, Burgers, Bowls. Le goût qui fait la différence." />
@@ -20,6 +20,7 @@
             brand: {
               red:    '#ff1e1e',
               red2:   '#ff3a3a',
+              redD:   '#a30000',
               dark:   '#0a0a0a',
               ink:    '#050505',
               char:   '#141414',
@@ -28,7 +29,7 @@
             }
           },
           fontFamily: {
-            display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+            display: ['"Anton"', 'Impact', 'sans-serif'],
             sans:    ['Inter', 'system-ui', 'sans-serif'],
             script:  ['"Caveat"', 'cursive'],
           },
@@ -44,7 +45,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
@@ -53,12 +54,15 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-red selection:text-white">
+<body class="bg-brand-ink text-white font-sans antialiased selection:bg-brand-red selection:text-white">
 
-  <!-- Cinematic background layers -->
+  <!-- ======= Cinematic ambient layers ======= -->
   <div class="bg-grain pointer-events-none fixed inset-0 z-0"></div>
-  <div class="bg-glow-1 pointer-events-none fixed -top-40 -left-40 h-[600px] w-[600px] rounded-full blur-[160px] z-0"></div>
-  <div class="bg-glow-2 pointer-events-none fixed top-1/3 -right-40 h-[500px] w-[500px] rounded-full blur-[160px] z-0"></div>
+  <div class="bg-vignette pointer-events-none fixed inset-0 z-0"></div>
+  <div class="bg-glow-1 pointer-events-none fixed -top-40 -left-40 h-[700px] w-[700px] rounded-full blur-[160px] z-0"></div>
+  <div class="bg-glow-2 pointer-events-none fixed top-1/3 -right-40 h-[600px] w-[600px] rounded-full blur-[180px] z-0"></div>
+  <div class="bg-glow-3 pointer-events-none fixed bottom-0 left-1/3 h-[500px] w-[500px] rounded-full blur-[180px] z-0"></div>
+  <div class="bg-scanlines pointer-events-none fixed inset-0 z-0"></div>
 
   <!-- ============== TOP BAR ============== -->
   <div class="topbar relative z-40 border-b border-brand-red/20 bg-black/70 backdrop-blur-md">
@@ -80,28 +84,26 @@
   <!-- ============== NAVBAR ============== -->
   <header id="nav" class="navbar fixed left-0 right-0 top-[36px] z-30 transition-all duration-300">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-      <!-- Logo -->
-      <a href="#home" class="flex items-center gap-3">
-        <span class="logo-star">
+      <a href="#home" class="flex items-center gap-3 group">
+        <span class="logo-star group-hover:scale-105 transition">
           <i class="fa-solid fa-star"></i>
         </span>
-        <span class="font-display text-2xl tracking-[0.18em]">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
+        <span class="font-display text-2xl tracking-[0.18em] leading-none">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
       </a>
 
-      <!-- Center menu -->
       <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/80">
-        <a href="#home"      class="nav-link">Accueil</a>
-        <a href="#tacos"     class="nav-link">Tacos</a>
-        <a href="#burgers"   class="nav-link">Burgers</a>
-        <a href="#bowls"     class="nav-link">Bowls</a>
-        <a href="#frites"    class="nav-link">Frites & Barquettes</a>
-        <a href="#desserts"  class="nav-link">Desserts</a>
-        <a href="#boissons"  class="nav-link">Boissons</a>
-        <a href="#contact"   class="nav-link">Contact</a>
+        <a href="#home"               class="nav-link">Accueil</a>
+        <a href="menu.html"            class="nav-link">Menu</a>
+        <a href="menu.html#tacos-signatures" class="nav-link">Tacos</a>
+        <a href="menu.html#burgers"   class="nav-link">Burgers</a>
+        <a href="menu.html#bowls"     class="nav-link">Bowls</a>
+        <a href="menu.html#frites"    class="nav-link">Frites</a>
+        <a href="menu.html#desserts"  class="nav-link">Desserts</a>
+        <a href="#contact"            class="nav-link">Contact</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#commander" class="btn-red hidden sm:inline-flex">
+        <a href="menu.html" class="btn-red hidden sm:inline-flex">
           <i class="fa-solid fa-bag-shopping"></i> COMMANDER
         </a>
         <button id="menuBtn" class="lg:hidden grid h-11 w-11 place-items-center rounded-xl border border-white/10 bg-white/5">
@@ -113,53 +115,72 @@
 
   <!-- Mobile drawer -->
   <div id="mobileNav" class="fixed inset-0 z-40 hidden">
-    <div class="absolute inset-0 bg-black/80 backdrop-blur-md" data-close></div>
-    <div class="absolute right-0 top-0 h-full w-[82%] max-w-sm border-l border-brand-red/20 bg-brand-ink p-6">
+    <div class="absolute inset-0 bg-black/85 backdrop-blur-md" data-close></div>
+    <div class="drawer absolute right-0 top-0 h-full w-[85%] max-w-sm border-l border-brand-red/20 bg-brand-ink p-6 overflow-y-auto">
       <div class="flex items-center justify-between mb-8">
         <span class="font-display text-2xl tracking-widest">L'ETOILE <span class="text-brand-red">CLERMONT</span></span>
         <button data-close class="grid h-10 w-10 place-items-center rounded-lg bg-white/5"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <nav class="flex flex-col gap-1 text-lg">
-        <a href="#home"     class="m-link" data-close>Accueil</a>
-        <a href="#tacos"    class="m-link" data-close>Tacos</a>
-        <a href="#burgers"  class="m-link" data-close>Burgers</a>
-        <a href="#bowls"    class="m-link" data-close>Bowls</a>
-        <a href="#frites"   class="m-link" data-close>Frites & Barquettes</a>
-        <a href="#desserts" class="m-link" data-close>Desserts</a>
-        <a href="#boissons" class="m-link" data-close>Boissons</a>
-        <a href="#contact"  class="m-link" data-close>Contact</a>
+        <a href="#home"     class="m-link" data-close><i class="fa-solid fa-house mr-3 text-brand-red w-5"></i>Accueil</a>
+        <a href="menu.html"                    class="m-link" data-close><i class="fa-solid fa-utensils mr-3 text-brand-red w-5"></i>Menu complet</a>
+        <a href="menu.html#tacos-signatures"   class="m-link" data-close><i class="fa-solid fa-pepper-hot mr-3 text-brand-red w-5"></i>Tacos</a>
+        <a href="menu.html#burgers"            class="m-link" data-close><i class="fa-solid fa-burger mr-3 text-brand-red w-5"></i>Burgers</a>
+        <a href="menu.html#bowls"              class="m-link" data-close><i class="fa-solid fa-bowl-food mr-3 text-brand-red w-5"></i>Bowls</a>
+        <a href="menu.html#frites"             class="m-link" data-close><i class="fa-solid fa-utensils mr-3 text-brand-red w-5"></i>Frites & Barquettes</a>
+        <a href="menu.html#desserts"           class="m-link" data-close><i class="fa-solid fa-ice-cream mr-3 text-brand-red w-5"></i>Desserts</a>
+        <a href="menu.html#boissons"           class="m-link" data-close><i class="fa-solid fa-mug-hot mr-3 text-brand-red w-5"></i>Boissons</a>
+        <a href="#contact"  class="m-link" data-close><i class="fa-solid fa-phone mr-3 text-brand-red w-5"></i>Contact</a>
       </nav>
-      <a href="#commander" class="btn-red mt-8 w-full justify-center" data-close>
-        <i class="fa-solid fa-bag-shopping"></i> COMMANDER
+      <a href="menu.html" class="btn-red mt-8 w-full justify-center" data-close>
+        <i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE
       </a>
       <div class="mt-8 border-t border-white/10 pt-6 text-sm text-brand-gray">
         <p class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 — 11h00 à 02h00</p>
         <p class="mt-2 flex items-start gap-2"><i class="fa-solid fa-location-dot text-brand-red mt-1"></i> 63 Avenue de la République,<br/>Clermont-Ferrand</p>
-        <div class="mt-5 flex gap-4 text-lg">
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-snapchat"></i></a>
-          <a href="#" class="hover:text-brand-red"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="mt-5 flex gap-3">
+          <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-snapchat"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-tiktok"></i></a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- ============== HERO ============== -->
-  <section id="home" class="relative z-10 overflow-hidden pt-44 pb-24 lg:pt-52 lg:pb-32">
-    <!-- Smoke / particles -->
-    <div class="smoke smoke-a"></div>
-    <div class="smoke smoke-b"></div>
+  <section id="home" class="hero relative z-10 overflow-hidden">
+    <!-- Cinematic stage layers -->
+    <div class="hero-stage">
+      <div class="stage-floor"></div>
+      <div class="stage-spot"></div>
+      <div class="stage-haze"></div>
+      <div class="smoke smoke-a"></div>
+      <div class="smoke smoke-b"></div>
+      <div class="smoke smoke-c"></div>
+      <div class="lightspot s1"></div>
+      <div class="lightspot s2"></div>
+    </div>
+
+    <!-- Big watermark word -->
+    <div class="hero-watermark" aria-hidden="true">L'ETOILE</div>
+
+    <!-- Particles -->
     <div id="particles" class="pointer-events-none absolute inset-0"></div>
 
-    <div class="mx-auto grid max-w-7xl gap-12 px-4 lg:grid-cols-2 lg:items-center">
+    <div class="relative mx-auto grid max-w-7xl gap-10 px-4 pt-44 pb-24 lg:pt-52 lg:pb-32 lg:grid-cols-12 lg:items-center">
       <!-- Left -->
-      <div class="relative">
-        <p class="font-script text-brand-red text-3xl md:text-4xl mb-3 reveal">Le goût qui fait la différence</p>
-        <h1 class="font-display leading-[0.85] text-[78px] md:text-[120px] tracking-tight reveal">
-          L'ETOILE
-          <span class="block text-brand-red drop-shadow-[0_0_30px_rgba(255,30,30,0.55)]">CLERMONT</span>
+      <div class="relative lg:col-span-6">
+        <p class="font-script text-brand-red text-[28px] md:text-[40px] mb-2 reveal flex items-center gap-3">
+          <span class="h-px w-10 bg-brand-red shadow-[0_0_10px_#ff1e1e]"></span>
+          Le goût qui fait la différence
+        </p>
+
+        <h1 class="hero-title reveal">
+          <span class="block">L'ETOILE</span>
+          <span class="block hero-title-red">CLERMONT</span>
         </h1>
+
         <p class="mt-6 max-w-md text-base md:text-lg text-brand-gray reveal">
           Tacos, Burgers, Bowls et plus encore… <br/>
           Des produits frais, des recettes uniques <br/>
@@ -167,18 +188,22 @@
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4 reveal">
-          <a href="#commander" class="btn-red btn-lg"><i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE</a>
-          <a href="#menu" class="btn-ghost btn-lg"><i class="fa-solid fa-utensils"></i> VOIR LE MENU</a>
+          <a href="menu.html" class="btn-red btn-lg btn-shine">
+            <i class="fa-solid fa-bag-shopping"></i> COMMANDER EN LIGNE
+          </a>
+          <a href="menu.html" class="btn-ghost btn-lg">
+            <i class="fa-solid fa-utensils"></i> VOIR LE MENU
+          </a>
         </div>
 
         <!-- Social proof -->
         <div class="mt-10 flex items-center gap-4 reveal">
           <div class="flex -space-x-3">
-            <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=14" alt="" />
-            <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=32" alt="" />
-            <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=47" alt="" />
-            <img class="h-10 w-10 rounded-full ring-2 ring-brand-dark object-cover" src="https://i.pravatar.cc/80?img=58" alt="" />
-            <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-xs font-bold ring-2 ring-brand-dark">+1k</span>
+            <img class="h-10 w-10 rounded-full ring-2 ring-brand-ink object-cover" src="https://i.pravatar.cc/80?img=14" alt="" />
+            <img class="h-10 w-10 rounded-full ring-2 ring-brand-ink object-cover" src="https://i.pravatar.cc/80?img=32" alt="" />
+            <img class="h-10 w-10 rounded-full ring-2 ring-brand-ink object-cover" src="https://i.pravatar.cc/80?img=47" alt="" />
+            <img class="h-10 w-10 rounded-full ring-2 ring-brand-ink object-cover" src="https://i.pravatar.cc/80?img=58" alt="" />
+            <span class="grid h-10 w-10 place-items-center rounded-full bg-brand-red text-xs font-bold ring-2 ring-brand-ink">+1k</span>
           </div>
           <div class="text-sm">
             <div class="text-brand-red text-base">
@@ -196,54 +221,86 @@
         </div>
       </div>
 
-      <!-- Right — Food composition -->
-      <div class="relative h-[480px] md:h-[620px] reveal">
-        <!-- glow disc -->
-        <div class="absolute left-1/2 top-1/2 h-[440px] w-[440px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,30,30,.45),transparent_60%)] blur-2xl"></div>
-        <div class="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-red/30 animate-spin-slow"></div>
-        <div class="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-brand-red/10"></div>
+      <!-- Right — Cinematic food composition -->
+      <div class="relative lg:col-span-6 reveal">
+        <div class="hero-comp" data-tilt>
+          <!-- aura layers -->
+          <div class="aura"></div>
+          <div class="aura-ring r1"></div>
+          <div class="aura-ring r2"></div>
+          <div class="aura-disc"></div>
 
-        <!-- Burger main -->
-        <img class="food-img float-a absolute left-1/2 top-1/2 h-[420px] md:h-[520px] -translate-x-1/2 -translate-y-1/2 object-contain"
-             src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
-             alt="Double cheeseburger" />
-
-        <!-- Tacos floating -->
-        <img class="food-chip float-b absolute -left-2 top-10 h-32 w-32 md:h-44 md:w-44 rounded-3xl object-cover ring-1 ring-white/10 shadow-soft"
-             src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80"
-             alt="French tacos" />
-
-        <!-- Fries floating -->
-        <img class="food-chip float-c absolute right-0 bottom-8 h-32 w-32 md:h-44 md:w-44 rounded-3xl object-cover ring-1 ring-white/10 shadow-soft"
-             src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
-             alt="Frites cheddar" />
-
-        <!-- Floating tag -->
-        <div class="float-d absolute right-2 top-6 glass px-4 py-3 rounded-2xl">
-          <div class="flex items-center gap-3">
-            <div class="grid h-9 w-9 place-items-center rounded-full bg-brand-red shadow-glow"><i class="fa-solid fa-fire"></i></div>
+          <!-- floating tag top -->
+          <div class="hero-tag tag-top glass">
+            <div class="grid h-10 w-10 place-items-center rounded-full bg-brand-red shadow-glow"><i class="fa-solid fa-fire"></i></div>
             <div>
-              <p class="text-xs uppercase tracking-widest text-brand-gray">Best seller</p>
-              <p class="text-sm font-semibold">O'Merveille Taco</p>
+              <p class="text-[10px] uppercase tracking-widest text-brand-gray">Best seller</p>
+              <p class="text-sm font-semibold leading-tight">O'Merveille Taco</p>
+              <p class="text-[11px] text-brand-red font-semibold">9,90 €</p>
             </div>
           </div>
-        </div>
 
-        <div class="float-e absolute -bottom-2 left-2 glass px-4 py-3 rounded-2xl">
-          <div class="flex items-center gap-3">
-            <div class="grid h-9 w-9 place-items-center rounded-full bg-white/10"><i class="fa-solid fa-bolt text-brand-red"></i></div>
+          <!-- Tacos chip (left) -->
+          <figure class="hero-chip chip-left float-b" data-depth="0.6">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=85" alt="French tacos signature" loading="eager" />
+            <figcaption><i class="fa-solid fa-pepper-hot"></i> Tacos</figcaption>
+          </figure>
+
+          <!-- Fries chip (right) -->
+          <figure class="hero-chip chip-right float-c" data-depth="0.7">
+            <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=85" alt="Frites cheddar bacon" loading="eager" />
+            <figcaption><i class="fa-solid fa-utensils"></i> Frites</figcaption>
+          </figure>
+
+          <!-- Sauce drip mini -->
+          <div class="hero-mini m-1 float-d">
+            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=300&q=80" alt="Sauce signature"/>
+          </div>
+
+          <!-- The hero burger -->
+          <figure class="hero-burger float-a" data-depth="0.3">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=90" alt="Double cheeseburger signature" loading="eager" />
+          </figure>
+
+          <!-- floating tag bottom -->
+          <div class="hero-tag tag-bottom glass">
+            <div class="grid h-10 w-10 place-items-center rounded-full bg-white/10 border border-white/10"><i class="fa-solid fa-bolt text-brand-red"></i></div>
             <div>
-              <p class="text-xs uppercase tracking-widest text-brand-gray">Livraison</p>
-              <p class="text-sm font-semibold">~ 25 min à Clermont</p>
+              <p class="text-[10px] uppercase tracking-widest text-brand-gray">Livraison</p>
+              <p class="text-sm font-semibold leading-tight">~ 25 min</p>
+              <p class="text-[11px] text-brand-red font-semibold">Clermont-Ferrand</p>
             </div>
           </div>
+
+          <!-- Sparks -->
+          <span class="spark s-a"></span>
+          <span class="spark s-b"></span>
+          <span class="spark s-c"></span>
+          <span class="spark s-d"></span>
         </div>
       </div>
     </div>
 
     <!-- scroll cue -->
-    <div class="mt-16 flex justify-center">
+    <div class="hidden md:flex justify-center pb-10">
       <div class="scroll-cue"><span></span></div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST / BRAND STRIP ============== -->
+  <section class="brand-strip relative z-10">
+    <div class="mx-auto max-w-7xl px-4 py-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-brand-gray text-sm">
+      <span class="trust-item"><i class="fa-brands fa-uber text-brand-red"></i> Uber Eats</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item"><i class="fa-solid fa-bicycle text-brand-red"></i> Deliveroo</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item"><i class="fa-solid fa-shop text-brand-red"></i> Click & Collect</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item"><i class="fa-solid fa-truck-fast text-brand-red"></i> Livraison 25 min</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item"><i class="fa-solid fa-shield-halved text-brand-red"></i> Paiement sécurisé</span>
+      <span class="trust-dot"></span>
+      <span class="trust-item"><i class="fa-solid fa-leaf text-brand-red"></i> Produits frais</span>
     </div>
   </section>
 
@@ -253,17 +310,17 @@
       <article class="feature-card reveal">
         <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
         <h3 class="font-display text-2xl tracking-wider">PRODUITS FRAIS</h3>
-        <p class="text-brand-gray mt-1">Qualité garantie</p>
+        <p class="text-brand-gray mt-1">Qualité garantie, sourcés localement</p>
       </article>
       <article class="feature-card reveal">
         <div class="feature-icon"><i class="fa-solid fa-fire-burner"></i></div>
         <h3 class="font-display text-2xl tracking-wider">FAIT MAISON</h3>
-        <p class="text-brand-gray mt-1">Recettes uniques</p>
+        <p class="text-brand-gray mt-1">Recettes signatures, sauces uniques</p>
       </article>
       <article class="feature-card reveal">
         <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
         <h3 class="font-display text-2xl tracking-wider">LIVRAISON RAPIDE</h3>
-        <p class="text-brand-gray mt-1">À Clermont-Ferrand</p>
+        <p class="text-brand-gray mt-1">25 min en moyenne à Clermont-Ferrand</p>
       </article>
     </div>
   </section>
@@ -278,54 +335,72 @@
       </div>
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Tacos -->
-        <a href="#tacos" id="tacos" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80')">
-          <div class="cat-icon"><i class="fa-solid fa-pepper-hot"></i></div>
-          <h3 class="cat-title">Tacos</h3>
-          <p class="cat-desc">Le french tacos signature, fondant et généreux. 1, 2 ou 3 viandes.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+        <a href="menu.html#tacos-signatures" id="tacos" class="cat-card reveal">
+          <div class="cat-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=85" alt=""/></div>
+          <div class="cat-shade"></div>
+          <div class="cat-content">
+            <div class="cat-icon"><i class="fa-solid fa-pepper-hot"></i></div>
+            <h3 class="cat-title">Tacos</h3>
+            <p class="cat-desc">Le french tacos signature, fondant et généreux. 1, 2 ou 3 viandes.</p>
+            <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </a>
-        <!-- Burgers -->
-        <a href="#burgers" id="burgers" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80')">
-          <div class="cat-icon"><i class="fa-solid fa-burger"></i></div>
-          <h3 class="cat-title">Burgers</h3>
-          <p class="cat-desc">Pains briochés, viande hachée du jour, fromages affinés.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+        <a href="menu.html#burgers" id="burgers" class="cat-card reveal">
+          <div class="cat-img"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt=""/></div>
+          <div class="cat-shade"></div>
+          <div class="cat-content">
+            <div class="cat-icon"><i class="fa-solid fa-burger"></i></div>
+            <h3 class="cat-title">Burgers</h3>
+            <p class="cat-desc">Pains briochés, viande hachée du jour, fromages affinés.</p>
+            <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </a>
-        <!-- Bowls -->
-        <a href="#bowls" id="bowls" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80')">
-          <div class="cat-icon"><i class="fa-solid fa-bowl-food"></i></div>
-          <h3 class="cat-title">Bowls</h3>
-          <p class="cat-desc">Frais, équilibrés, gourmands. Poulet crispy, saumon, veggie.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+        <a href="menu.html#bowls" id="bowls" class="cat-card reveal">
+          <div class="cat-img"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=85" alt=""/></div>
+          <div class="cat-shade"></div>
+          <div class="cat-content">
+            <div class="cat-icon"><i class="fa-solid fa-bowl-food"></i></div>
+            <h3 class="cat-title">Bowls</h3>
+            <p class="cat-desc">Frais, équilibrés, gourmands. Poulet crispy, saumon, veggie.</p>
+            <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </a>
-        <!-- Frites -->
-        <a href="#frites" id="frites" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=80')">
-          <div class="cat-icon"><i class="fa-solid fa-utensils"></i></div>
-          <h3 class="cat-title">Frites & Barquettes</h3>
-          <p class="cat-desc">Cheddar bacon, sauce maison, poulet crispy, nuggets premium.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+        <a href="menu.html#frites" id="frites" class="cat-card reveal">
+          <div class="cat-img"><img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=85" alt=""/></div>
+          <div class="cat-shade"></div>
+          <div class="cat-content">
+            <div class="cat-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h3 class="cat-title">Frites & Barquettes</h3>
+            <p class="cat-desc">Cheddar bacon, sauce maison, poulet crispy, nuggets premium.</p>
+            <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </a>
-        <!-- Desserts -->
-        <a href="#desserts" id="desserts" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80')">
-          <div class="cat-icon"><i class="fa-solid fa-ice-cream"></i></div>
-          <h3 class="cat-title">Desserts</h3>
-          <p class="cat-desc">Cookies coulants, brownies, gaufres, fondants chocolat.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+        <a href="menu.html#desserts" id="desserts" class="cat-card reveal">
+          <div class="cat-img"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=85" alt=""/></div>
+          <div class="cat-shade"></div>
+          <div class="cat-content">
+            <div class="cat-icon"><i class="fa-solid fa-ice-cream"></i></div>
+            <h3 class="cat-title">Desserts</h3>
+            <p class="cat-desc">Cookies coulants, brownies, gaufres, fondants chocolat.</p>
+            <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </a>
-        <!-- Boissons -->
-        <a href="#boissons" id="boissons" class="cat-card reveal" style="--img:url('https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=80')">
-          <div class="cat-icon"><i class="fa-solid fa-mug-hot"></i></div>
-          <h3 class="cat-title">Boissons</h3>
-          <p class="cat-desc">Sodas frais, milkshakes onctueux, eaux et jus pressés.</p>
-          <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+        <a href="menu.html#boissons" id="boissons" class="cat-card reveal">
+          <div class="cat-img"><img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=900&q=85" alt=""/></div>
+          <div class="cat-shade"></div>
+          <div class="cat-content">
+            <div class="cat-icon"><i class="fa-solid fa-mug-hot"></i></div>
+            <h3 class="cat-title">Boissons</h3>
+            <p class="cat-desc">Sodas frais, milkshakes onctueux, eaux et jus pressés.</p>
+            <span class="btn-red btn-sm cat-cta">DÉCOUVRIR <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ============== SIGNATURE PRODUCTS ============== -->
-  <section id="commander" class="relative z-10 py-24">
+  <!-- ============== BEST SELLERS ============== -->
+  <section id="bestsellers" class="relative z-10 py-20">
     <div class="ribbon">
       <div class="ribbon-track">
         <span>★ NOUVEAUTÉ</span><span>★ BEST-SELLERS</span><span>★ FAIT MAISON</span><span>★ PRODUITS FRAIS</span>
@@ -333,11 +408,11 @@
       </div>
     </div>
 
-    <div class="mx-auto max-w-7xl px-4 mt-16">
+    <div id="commander" class="mx-auto max-w-7xl px-4 mt-16">
       <div class="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-4 reveal">
         <div>
           <p class="font-script text-brand-red text-2xl">Les incontournables</p>
-          <h2 class="section-title">Produits signature</h2>
+          <h2 class="section-title">Best sellers</h2>
         </div>
         <p class="text-brand-gray max-w-md">
           La sélection des recettes les plus commandées par nos clients.
@@ -346,55 +421,63 @@
       </div>
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <!-- Product 1 -->
         <article class="prod-card reveal">
-          <div class="prod-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=80" alt="O'Merveille Taco"/></div>
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=85" alt="O'Merveille Taco"/>
+            <span class="prod-glow"></span>
+          </div>
           <span class="badge"><i class="fa-solid fa-fire"></i> TOP</span>
           <div class="p-5">
             <h3 class="font-display text-2xl tracking-wider">O'Merveille Taco</h3>
             <p class="text-sm text-brand-gray mt-1">Poulet, cheddar, sauce signature, oignons crispy</p>
             <div class="mt-5 flex items-center justify-between">
               <span class="font-display text-2xl text-brand-red">9,90 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</a>
             </div>
           </div>
         </article>
-        <!-- Product 2 -->
         <article class="prod-card reveal">
-          <div class="prod-img"><img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=900&q=80" alt="O'Spicy Taco"/></div>
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=900&q=85" alt="O'Spicy Taco"/>
+            <span class="prod-glow"></span>
+          </div>
           <span class="badge"><i class="fa-solid fa-pepper-hot"></i> SPICY</span>
           <div class="p-5">
             <h3 class="font-display text-2xl tracking-wider">O'Spicy Taco</h3>
             <p class="text-sm text-brand-gray mt-1">Boeuf haché, jalapeños, cheddar fondu, sauce piquante</p>
             <div class="mt-5 flex items-center justify-between">
               <span class="font-display text-2xl text-brand-red">10,50 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</a>
             </div>
           </div>
         </article>
-        <!-- Product 3 -->
         <article class="prod-card reveal">
-          <div class="prod-img"><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=80" alt="Double Cheese Burger"/></div>
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85" alt="Double Cheese Burger"/>
+            <span class="prod-glow"></span>
+          </div>
           <span class="badge"><i class="fa-solid fa-star"></i> SIGNATURE</span>
           <div class="p-5">
             <h3 class="font-display text-2xl tracking-wider">Double Cheese</h3>
             <p class="text-sm text-brand-gray mt-1">Double steak, double cheddar, oignons confits, bun brioché</p>
             <div class="mt-5 flex items-center justify-between">
               <span class="font-display text-2xl text-brand-red">11,90 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</a>
             </div>
           </div>
         </article>
-        <!-- Product 4 -->
         <article class="prod-card reveal">
-          <div class="prod-img"><img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=80" alt="Frites Cheddar Bacon"/></div>
+          <div class="prod-img">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=85" alt="Frites Cheddar Bacon"/>
+            <span class="prod-glow"></span>
+          </div>
           <span class="badge"><i class="fa-solid fa-bacon"></i> NEW</span>
           <div class="p-5">
             <h3 class="font-display text-2xl tracking-wider">Frites Cheddar Bacon</h3>
             <p class="text-sm text-brand-gray mt-1">Frites maison, cheddar coulant, éclats de bacon</p>
             <div class="mt-5 flex items-center justify-between">
               <span class="font-display text-2xl text-brand-red">7,50 €</span>
-              <button class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</button>
+              <a href="menu.html" class="btn-red btn-sm"><i class="fa-solid fa-plus"></i> AJOUTER</a>
             </div>
           </div>
         </article>
@@ -405,27 +488,25 @@
   <!-- ============== ABOUT ============== -->
   <section class="relative z-10 py-24">
     <div class="mx-auto max-w-7xl px-4 grid gap-12 lg:grid-cols-2 lg:items-center">
-      <!-- Mosaic -->
       <div class="grid grid-cols-6 grid-rows-6 gap-3 h-[520px] reveal">
         <div class="col-span-4 row-span-4 about-tile">
-          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Cuisine ouverte" />
+          <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=85" alt="Cuisine ouverte" />
         </div>
         <div class="col-span-2 row-span-3 about-tile">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Ambiance" />
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=85" alt="Ambiance" />
         </div>
         <div class="col-span-2 row-span-3 about-tile">
-          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=80" alt="Clients heureux" />
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=85" alt="Clients heureux" />
         </div>
         <div class="col-span-3 row-span-2 about-tile">
-          <img src="https://images.unsplash.com/photo-1559054663-e8d23213f55c?auto=format&fit=crop&w=600&q=80" alt="Plat préparé" />
+          <img src="https://images.unsplash.com/photo-1559054663-e8d23213f55c?auto=format&fit=crop&w=600&q=85" alt="Plat préparé" />
         </div>
         <div class="col-span-3 row-span-2 about-tile relative">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Chef" />
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=85" alt="Chef" />
           <span class="absolute right-3 bottom-3 glass px-3 py-2 rounded-xl text-xs uppercase tracking-widest"><i class="fa-solid fa-star text-brand-red"></i> Depuis 2018</span>
         </div>
       </div>
 
-      <!-- Text -->
       <div class="reveal">
         <p class="font-script text-brand-red text-2xl">À propos</p>
         <h2 class="section-title">Une expérience street food <span class="text-brand-red">premium</span></h2>
@@ -452,6 +533,65 @@
     </div>
   </section>
 
+  <!-- ============== GALLERY / FOOD SHOWCASE ============== -->
+  <section class="relative z-10 py-24">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="mb-14 text-center reveal">
+        <p class="font-script text-brand-red text-2xl">Galerie</p>
+        <h2 class="section-title">Food showcase</h2>
+        <div class="title-underline"></div>
+        <p class="mt-4 text-brand-gray max-w-xl mx-auto">
+          Une sélection cinématique de nos recettes les plus populaires.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <a href="menu.html" class="g-item g-1 reveal">
+          <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85" alt=""/>
+          <div class="g-overlay">
+            <span class="g-tag"><i class="fa-solid fa-burger"></i> Burger signature</span>
+            <span class="g-cta">Voir <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="menu.html" class="g-item g-2 reveal">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=85" alt=""/>
+          <div class="g-overlay">
+            <span class="g-tag"><i class="fa-solid fa-pepper-hot"></i> French tacos</span>
+            <span class="g-cta">Voir <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="menu.html" class="g-item g-3 reveal">
+          <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=900&q=85" alt=""/>
+          <div class="g-overlay">
+            <span class="g-tag"><i class="fa-solid fa-utensils"></i> Frites cheddar</span>
+            <span class="g-cta">Voir <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="menu.html" class="g-item g-4 reveal">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=85" alt=""/>
+          <div class="g-overlay">
+            <span class="g-tag"><i class="fa-solid fa-ice-cream"></i> Desserts</span>
+            <span class="g-cta">Voir <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="menu.html" class="g-item g-5 reveal">
+          <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=85" alt=""/>
+          <div class="g-overlay">
+            <span class="g-tag"><i class="fa-solid fa-bowl-food"></i> Bowl healthy</span>
+            <span class="g-cta">Voir <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+        <a href="menu.html" class="g-item g-6 reveal">
+          <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=900&q=85" alt=""/>
+          <div class="g-overlay">
+            <span class="g-tag"><i class="fa-solid fa-fire"></i> O'Spicy</span>
+            <span class="g-cta">Voir <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============== REVIEWS ============== -->
   <section class="relative z-10 py-24">
     <div class="mx-auto max-w-7xl px-4">
@@ -463,8 +603,8 @@
 
       <div id="reviews" class="reviews">
         <div class="reviews-track">
-          <!-- 1 -->
           <article class="review-card">
+            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
             <div class="flex items-center gap-3">
               <img src="https://i.pravatar.cc/100?img=12" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
               <div>
@@ -475,8 +615,8 @@
             </div>
             <p class="mt-4 text-brand-gray">"Le meilleur tacos de Clermont, sans hésiter. Sauce maison incroyable, livraison ultra rapide. Je recommande à 100%."</p>
           </article>
-          <!-- 2 -->
           <article class="review-card">
+            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
             <div class="flex items-center gap-3">
               <img src="https://i.pravatar.cc/100?img=44" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
               <div>
@@ -487,8 +627,8 @@
             </div>
             <p class="mt-4 text-brand-gray">"Burger Double Cheese juste parfait, le pain est moelleux, la viande savoureuse. Une vraie pépite, et l'équipe est adorable."</p>
           </article>
-          <!-- 3 -->
           <article class="review-card">
+            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
             <div class="flex items-center gap-3">
               <img src="https://i.pravatar.cc/100?img=33" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
               <div>
@@ -499,8 +639,8 @@
             </div>
             <p class="mt-4 text-brand-gray">"Frites cheddar bacon en mode tuerie. Le rapport qualité/prix est top, et les portions sont généreuses."</p>
           </article>
-          <!-- 4 -->
           <article class="review-card">
+            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
             <div class="flex items-center gap-3">
               <img src="https://i.pravatar.cc/100?img=5" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
               <div>
@@ -511,8 +651,8 @@
             </div>
             <p class="mt-4 text-brand-gray">"Bowl poulet crispy parfait pour la pause dej'. Frais, équilibré, ultra bon. Et les desserts maison sont à tomber."</p>
           </article>
-          <!-- 5 -->
           <article class="review-card">
+            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
             <div class="flex items-center gap-3">
               <img src="https://i.pravatar.cc/100?img=68" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
               <div>
@@ -523,8 +663,8 @@
             </div>
             <p class="mt-4 text-brand-gray">"Adresse de référence à Clermont. Les recettes signatures sont vraiment uniques. Le O'Spicy est devenu mon péché mignon."</p>
           </article>
-          <!-- 6 -->
           <article class="review-card">
+            <div class="quote-mark"><i class="fa-solid fa-quote-right"></i></div>
             <div class="flex items-center gap-3">
               <img src="https://i.pravatar.cc/100?img=21" class="h-12 w-12 rounded-full ring-2 ring-brand-red/40 object-cover" alt=""/>
               <div>
@@ -557,7 +697,7 @@
             </p>
 
             <div class="mt-8 flex flex-wrap gap-4">
-              <a href="#" class="brand-pill"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
+              <a href="#" class="brand-pill"><i class="fa-brands fa-uber"></i> Uber Eats</a>
               <a href="#" class="brand-pill"><i class="fa-solid fa-bicycle"></i> Deliveroo</a>
               <a href="#" class="brand-pill"><i class="fa-solid fa-bag-shopping"></i> Click & Collect</a>
             </div>
@@ -569,7 +709,7 @@
             </div>
 
             <div class="mt-10 flex flex-wrap gap-4">
-              <a href="#" class="btn-red btn-lg"><i class="fa-solid fa-bolt"></i> COMMANDER MAINTENANT</a>
+              <a href="#" class="btn-red btn-lg btn-shine"><i class="fa-solid fa-bolt"></i> COMMANDER MAINTENANT</a>
               <a href="#" class="btn-ghost btn-lg"><i class="fa-solid fa-phone"></i> 04 73 00 00 00</a>
             </div>
           </div>
@@ -623,7 +763,6 @@
               </div>
             </div>
 
-            <!-- Floating tags around phone -->
             <div class="absolute -top-4 -left-4 glass rounded-2xl px-4 py-3 floaty">
               <div class="flex items-center gap-3">
                 <i class="fa-solid fa-motorcycle text-brand-red"></i>
@@ -642,6 +781,23 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA banner ============== -->
+  <section class="relative z-10 pb-24">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="cta-banner reveal">
+        <div class="cta-banner-inner">
+          <p class="font-script text-brand-red text-2xl">Prêt à craquer ?</p>
+          <h3 class="font-display text-4xl md:text-6xl tracking-wider mt-1">COMMANDEZ <span class="text-brand-red">MAINTENANT</span></h3>
+          <p class="text-brand-gray mt-3 max-w-lg">Livraison rapide ou à emporter. Faites-vous plaisir avec nos recettes signatures L'Etoile.</p>
+          <div class="mt-7 flex flex-wrap gap-4">
+            <a href="menu.html" class="btn-red btn-lg btn-shine"><i class="fa-solid fa-bag-shopping"></i> COMMANDER</a>
+            <a href="#contact" class="btn-ghost btn-lg"><i class="fa-solid fa-location-dot"></i> NOUS TROUVER</a>
           </div>
         </div>
       </div>
@@ -670,12 +826,12 @@
       <div>
         <p class="footer-title">Menu</p>
         <ul class="footer-list">
-          <li><a href="#tacos">Tacos</a></li>
-          <li><a href="#burgers">Burgers</a></li>
-          <li><a href="#bowls">Bowls</a></li>
-          <li><a href="#frites">Frites & Barquettes</a></li>
-          <li><a href="#desserts">Desserts</a></li>
-          <li><a href="#boissons">Boissons</a></li>
+          <li><a href="menu.html#tacos-signatures">Tacos Signatures</a></li>
+          <li><a href="menu.html#burgers">Burgers</a></li>
+          <li><a href="menu.html#bowls">Bowls</a></li>
+          <li><a href="menu.html#frites">Frites & Barquettes</a></li>
+          <li><a href="menu.html#desserts">Desserts</a></li>
+          <li><a href="menu.html#boissons">Boissons</a></li>
         </ul>
       </div>
 
@@ -687,6 +843,17 @@
           <li><i class="fa-regular fa-clock text-brand-red mr-2"></i> 7j/7 — 11h00 à 02h00</li>
           <li><i class="fa-regular fa-envelope text-brand-red mr-2"></i> contact@letoile-clermont.fr</li>
         </ul>
+
+        <!-- Mini map -->
+        <div class="mini-map mt-5">
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=3.0856%2C45.7700%2C3.0956%2C45.7800&amp;layer=mapnik&amp;marker=45.7750%2C3.0906"
+            allowfullscreen></iframe>
+          <div class="mini-map-overlay"></div>
+          <a class="mini-map-pin" href="https://www.openstreetmap.org/?mlat=45.7750&amp;mlon=3.0906#map=16/45.7750/3.0906" target="_blank" rel="noopener">
+            <i class="fa-solid fa-location-dot"></i> Voir sur la carte
+          </a>
+        </div>
       </div>
 
       <div>
@@ -716,7 +883,7 @@
   </footer>
 
   <!-- Floating CTA (mobile) -->
-  <a href="#commander" class="floating-cta">
+  <a href="menu.html" class="floating-cta">
     <i class="fa-solid fa-bag-shopping"></i> Commander
   </a>
 
