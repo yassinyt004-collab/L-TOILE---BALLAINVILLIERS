@@ -1,3 +1,91 @@
-User-agent: *
-Allow: /
-Sitemap: /sitemap.xml
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Menu complet — L'Etoile Clermont Ballainvilliers</title>
+  <meta name="description" content="Menu complet de L'Etoile Clermont Ballainvilliers : tacos signatures, tacos à composer, burgers, bowls, frites, desserts et boissons." />
+  <meta property="og:title" content="Menu L'Etoile Clermont" />
+  <meta property="og:description" content="Découvrez la carte complète : tacos, burgers, bowls, frites, desserts et boissons." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { brand: { red:'#ff1e1e', red2:'#ff3a3a', dark:'#0a0a0a', ink:'#050505', char:'#141414', line:'#1f1f1f', gray:'#a8a8a8'}}, fontFamily:{display:['"Bebas Neue"','Impact','sans-serif'], sans:['Inter','system-ui','sans-serif'], script:['"Caveat"','cursive']}, boxShadow:{glow:'0 0 40px rgba(255,30,30,.55), 0 0 90px rgba(255,30,30,.25)', soft:'0 30px 60px -20px rgba(0,0,0,.7)'} } } }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-red selection:text-white">
+  <div class="bg-grain pointer-events-none fixed inset-0 z-0"></div>
+  <div class="bg-glow-1 pointer-events-none fixed -top-40 -left-40 h-[600px] w-[600px] rounded-full blur-[160px] z-0"></div>
+  <div class="bg-glow-2 pointer-events-none fixed top-1/3 -right-40 h-[500px] w-[500px] rounded-full blur-[160px] z-0"></div>
+
+  <div class="topbar relative z-40 border-b border-brand-red/20 bg-black/70 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-[12px] text-brand-gray">
+      <div class="flex items-center gap-5">
+        <span class="flex items-center gap-2"><i class="fa-regular fa-clock text-brand-red"></i> 7j/7 de 10h00 à 01h00</span>
+        <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-red"></i> 29 Rue Ballainvilliers, Clermont-Ferrand</span>
+      </div>
+      <a href="tel:0473905738" class="hover:text-brand-red transition"><i class="fa-solid fa-phone text-brand-red mr-2"></i>04 73 90 57 38</a>
+    </div>
+    <div class="topbar-line"></div>
+  </div>
+
+  <header id="nav" class="navbar fixed left-0 right-0 top-[36px] z-30 transition-all duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+      <a href="index.html#home" class="flex items-center gap-3"><span class="logo-star"><i class="fa-solid fa-star"></i></span><span class="font-display text-2xl tracking-[0.18em]">L'ETOILE <span class="text-brand-red">CLERMONT</span></span></a>
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-white/80">
+        <a href="index.html#home" class="nav-link">Accueil</a>
+        <a href="#tacos-signatures" class="nav-link">Tacos</a>
+        <a href="#burgers" class="nav-link">Burgers</a>
+        <a href="#bowls" class="nav-link">Bowls</a>
+        <a href="#frites" class="nav-link">Frites & Barquettes</a>
+        <a href="#desserts" class="nav-link">Desserts</a>
+        <a href="#boissons" class="nav-link">Boissons</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="tel:0473905738" class="btn-red hidden sm:inline-flex"><i class="fa-solid fa-phone"></i> COMMANDER</a>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-44 pb-24">
+    <section class="mx-auto max-w-7xl px-4">
+      <div class="menu-hero reveal">
+        <p class="font-script text-brand-red text-3xl">La carte complète</p>
+        <h1 class="font-display text-[72px] md:text-[110px] leading-[0.85]">MENU <span class="text-brand-red">L'ETOILE</span></h1>
+        <p class="mt-5 max-w-2xl text-brand-gray">Tacos signatures, burgers, bowls, frites & barquettes, desserts et boissons. Choisissez votre catégorie, recherchez un plat, puis commandez par téléphone ou via Uber Eats.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a class="btn-red btn-lg" href="tel:0473905738"><i class="fa-solid fa-phone"></i> 04 73 90 57 38</a>
+          <a class="btn-ghost btn-lg" target="_blank" rel="noopener" href="https://www.ubereats.com/fr-en/store/letoile-ballainvilliers-clermont/W7dR6fEYQMW9Rufibn16AA"><i class="fa-solid fa-utensils"></i> Uber Eats</a>
+        </div>
+      </div>
+
+      <div class="menu-toolbar reveal">
+        <div class="search-wrap"><i class="fa-solid fa-magnifying-glass"></i><input id="menuSearch" type="search" placeholder="Rechercher un burger, tacos, dessert..." autocomplete="off"/><button id="clearSearch" aria-label="Effacer la recherche"><i class="fa-solid fa-xmark"></i></button></div>
+        <nav class="menu-tabs" aria-label="Catégories du menu">
+          <a href="#tacos-signatures">Tacos signatures</a><a href="#tacos-composer">Tacos à composer</a><a href="#burgers">Burgers</a><a href="#bowls">Bowls</a><a href="#frites">Frites</a><a href="#desserts">Desserts</a><a href="#boissons">Boissons</a>
+        </nav>
+      </div>
+
+      <p id="noResults" class="hidden rounded-2xl border border-brand-red/25 bg-brand-red/10 p-6 text-center text-brand-gray">Aucun plat ne correspond à votre recherche.</p>
+
+      <div id="menuList" class="space-y-20 mt-12"></div>
+    </section>
+  </main>
+
+  <footer id="contact" class="relative z-10 border-t border-white/5 bg-black/60 backdrop-blur-md">
+    <div class="mx-auto max-w-7xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-brand-gray">
+      <div class="flex items-center gap-3"><span class="logo-star sm"><i class="fa-solid fa-star"></i></span><span class="font-display text-xl tracking-widest text-white">L'ETOILE <span class="text-brand-red">CLERMONT</span></span></div>
+      <div class="flex flex-wrap justify-center gap-4"><span>29 Rue Ballainvilliers, 63000 Clermont-Ferrand</span><a class="hover:text-brand-red" href="tel:0473905738">04 73 90 57 38</a><span>7j/7 — 10h00 à 01h00</span></div>
+      <a class="hover:text-brand-red" href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <a href="tel:0473905738" class="floating-cta"><i class="fa-solid fa-phone"></i> Commander</a>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
